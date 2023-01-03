@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>fnpcell.pdk.technology.display API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/sanitize.min.css">
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/typography.min.css">
+<link rel="stylesheet preload" as="style" href="../../assets/highlight.js/10.1.1/styles/github-dark.min.css">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="../../assets/highlight.js/10.1.1/highlight.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>fnpcell.pdk.technology.display</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="fnpcell.pdk.technology.display.Color"><code class="flex name class">
+<span>class <span class="ident">Color</span></span>
+<span>(</span><span>r: float, g: float, b: float, a: float = 1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Built-in immutable sequence.</p>
+<p>If no argument is given, the constructor returns an empty tuple.
+If iterable is specified the tuple is initialized from iterable's items.</p>
+<p>If the argument is a tuple, the return value is the same object.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>builtins.tuple</li>
+<li>typing.Generic</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><unknown>.NamedColor</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.display.Color.with_alpha"><code class="name flex">
+<span>def <span class="ident">with_alpha</span></span>(<span>self, alpha: float)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.display.FillPattern"><code class="flex name class">
+<span>class <span class="ident">FillPattern</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.display.FillPattern.BACK_DIAGONAL"><code class="name">var <span class="ident">BACK_DIAGONAL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.FillPattern.DIAGONAL"><code class="name">var <span class="ident">DIAGONAL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.FillPattern.DOTTED"><code class="name">var <span class="ident">DOTTED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.FillPattern.GRID"><code class="name">var <span class="ident">GRID</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.FillPattern.HOLLOW"><code class="name">var <span class="ident">HOLLOW</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.FillPattern.SOLID"><code class="name">var <span class="ident">SOLID</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.display.LayerFill"><code class="flex name class">
+<span>class <span class="ident">LayerFill</span></span>
+<span>(</span><span>color: <a title="fnpcell.pdk.technology.display.Color" href="#fnpcell.pdk.technology.display.Color">Color</a>, pattern: <a title="fnpcell.pdk.technology.display.FillPattern" href="#fnpcell.pdk.technology.display.FillPattern">FillPattern</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>LayerFill(color: fnpcell.pdk.technology.display.Color, pattern: fnpcell.pdk.technology.display.FillPattern)</p></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.display.LayerFill.color"><code class="name">var <span class="ident">color</span> : <a title="fnpcell.pdk.technology.display.Color" href="#fnpcell.pdk.technology.display.Color">Color</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.LayerFill.pattern"><code class="name">var <span class="ident">pattern</span> : <a title="fnpcell.pdk.technology.display.FillPattern" href="#fnpcell.pdk.technology.display.FillPattern">FillPattern</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.display.LayerStroke"><code class="flex name class">
+<span>class <span class="ident">LayerStroke</span></span>
+<span>(</span><span>width: float, color: <a title="fnpcell.pdk.technology.display.Color" href="#fnpcell.pdk.technology.display.Color">Color</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>LayerStroke(width: float, color: fnpcell.pdk.technology.display.Color)</p></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.display.LayerStroke.color"><code class="name">var <span class="ident">color</span> : <a title="fnpcell.pdk.technology.display.Color" href="#fnpcell.pdk.technology.display.Color">Color</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.LayerStroke.width"><code class="name">var <span class="ident">width</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.display.LayerStyle"><code class="flex name class">
+<span>class <span class="ident">LayerStyle</span></span>
+<span>(</span><span>fill: <a title="fnpcell.pdk.technology.display.LayerFill" href="#fnpcell.pdk.technology.display.LayerFill">LayerFill</a>, stroke: <a title="fnpcell.pdk.technology.display.LayerStroke" href="#fnpcell.pdk.technology.display.LayerStroke">LayerStroke</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>LayerStyle(fill: fnpcell.pdk.technology.display.LayerFill, stroke: fnpcell.pdk.technology.display.LayerStroke)</p></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.display.LayerStyle.fill"><code class="name">var <span class="ident">fill</span> : <a title="fnpcell.pdk.technology.display.LayerFill" href="#fnpcell.pdk.technology.display.LayerFill">LayerFill</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.LayerStyle.stroke"><code class="name">var <span class="ident">stroke</span> : <a title="fnpcell.pdk.technology.display.LayerStroke" href="#fnpcell.pdk.technology.display.LayerStroke">LayerStroke</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.display.LayerStyleSet"><code class="flex name class">
+<span>class <span class="ident">LayerStyleSet</span></span>
+<span>(</span><span>registry: Optional[Mapping[<a title="fnpcell.interfaces.ILayer" href="../../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a>, <a title="fnpcell.pdk.technology.display.LayerStyle" href="#fnpcell.pdk.technology.display.LayerStyle">LayerStyle</a>]] = None, /)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Static methods</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.display.LayerStyleSet.random"><code class="name flex">
+<span>def <span class="ident">random</span></span>(<span>layers: Sequence[<a title="fnpcell.interfaces.ILayer" href="../../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a>])</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.display.LayerStyleSet.get"><code class="name flex">
+<span>def <span class="ident">get</span></span>(<span>self, key: <a title="fnpcell.interfaces.ILayer" href="../../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a>, default: Optional[<a title="fnpcell.pdk.technology.display.LayerStyle" href="#fnpcell.pdk.technology.display.LayerStyle">LayerStyle</a>] = None) ‑> Optional[<a title="fnpcell.pdk.technology.display.LayerStyle" href="#fnpcell.pdk.technology.display.LayerStyle">LayerStyle</a>]</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.LayerStyleSet.updated"><code class="name flex">
+<span>def <span class="ident">updated</span></span>(<span>self, value: Mapping[<a title="fnpcell.interfaces.ILayer" href="../../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a>, <a title="fnpcell.pdk.technology.display.LayerStyle" href="#fnpcell.pdk.technology.display.LayerStyle">LayerStyle</a>], /)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor"><code class="flex name class">
+<span>class <span class="ident">NamedColor</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.technology.display.Color" href="#fnpcell.pdk.technology.display.Color">Color</a></li>
+<li>builtins.tuple</li>
+<li>typing.Generic</li>
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.display.NamedColor.ALICEBLUE"><code class="name">var <span class="ident">ALICEBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.ANTIQUEWHITE"><code class="name">var <span class="ident">ANTIQUEWHITE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.AQUAMARINE"><code class="name">var <span class="ident">AQUAMARINE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.AZURE"><code class="name">var <span class="ident">AZURE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.BEIGE"><code class="name">var <span class="ident">BEIGE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.BISQUE"><code class="name">var <span class="ident">BISQUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.BLACK"><code class="name">var <span class="ident">BLACK</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.BLANCHEDALMOND"><code class="name">var <span class="ident">BLANCHEDALMOND</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.BLUE"><code class="name">var <span class="ident">BLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.BLUEVIOLET"><code class="name">var <span class="ident">BLUEVIOLET</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.BROWN"><code class="name">var <span class="ident">BROWN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.BURLYWOOD"><code class="name">var <span class="ident">BURLYWOOD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.CADETBLUE"><code class="name">var <span class="ident">CADETBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.CHARTREUSE"><code class="name">var <span class="ident">CHARTREUSE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.CHOCOLATE"><code class="name">var <span class="ident">CHOCOLATE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.CORAL"><code class="name">var <span class="ident">CORAL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.CORNFLOWERBLUE"><code class="name">var <span class="ident">CORNFLOWERBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.CORNSILK"><code class="name">var <span class="ident">CORNSILK</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.CRIMSON"><code class="name">var <span class="ident">CRIMSON</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.CYAN"><code class="name">var <span class="ident">CYAN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKBLUE"><code class="name">var <span class="ident">DARKBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKCYAN"><code class="name">var <span class="ident">DARKCYAN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKGOLDENROD"><code class="name">var <span class="ident">DARKGOLDENROD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKGRAY"><code class="name">var <span class="ident">DARKGRAY</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKGREEN"><code class="name">var <span class="ident">DARKGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKKHAKI"><code class="name">var <span class="ident">DARKKHAKI</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKMAGENTA"><code class="name">var <span class="ident">DARKMAGENTA</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKOLIVEGREEN"><code class="name">var <span class="ident">DARKOLIVEGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKORANGE"><code class="name">var <span class="ident">DARKORANGE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKORCHID"><code class="name">var <span class="ident">DARKORCHID</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKRED"><code class="name">var <span class="ident">DARKRED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKSALMON"><code class="name">var <span class="ident">DARKSALMON</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKSEAGREEN"><code class="name">var <span class="ident">DARKSEAGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKSLATEBLUE"><code class="name">var <span class="ident">DARKSLATEBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKSLATEGRAY"><code class="name">var <span class="ident">DARKSLATEGRAY</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKTURQUOISE"><code class="name">var <span class="ident">DARKTURQUOISE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DARKVIOLET"><code class="name">var <span class="ident">DARKVIOLET</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DEEPPINK"><code class="name">var <span class="ident">DEEPPINK</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DEEPSKYBLUE"><code class="name">var <span class="ident">DEEPSKYBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DIMGRAY"><code class="name">var <span class="ident">DIMGRAY</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.DODGERBLUE"><code class="name">var <span class="ident">DODGERBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.FIREBRICK"><code class="name">var <span class="ident">FIREBRICK</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.FLORALWHITE"><code class="name">var <span class="ident">FLORALWHITE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.FORESTGREEN"><code class="name">var <span class="ident">FORESTGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.FUCHSIA"><code class="name">var <span class="ident">FUCHSIA</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.GAINSBORO"><code class="name">var <span class="ident">GAINSBORO</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.GHOSTWHITE"><code class="name">var <span class="ident">GHOSTWHITE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.GOLD"><code class="name">var <span class="ident">GOLD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.GOLDENROD"><code class="name">var <span class="ident">GOLDENROD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.GRAY"><code class="name">var <span class="ident">GRAY</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.GREEN"><code class="name">var <span class="ident">GREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.GREENYELLOW"><code class="name">var <span class="ident">GREENYELLOW</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.HONEYDEW"><code class="name">var <span class="ident">HONEYDEW</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.HOTPINK"><code class="name">var <span class="ident">HOTPINK</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.INDIANRED"><code class="name">var <span class="ident">INDIANRED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.INDIGO"><code class="name">var <span class="ident">INDIGO</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.IVORY"><code class="name">var <span class="ident">IVORY</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.KHAKI"><code class="name">var <span class="ident">KHAKI</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LAVENDER"><code class="name">var <span class="ident">LAVENDER</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LAVENDERBLUSH"><code class="name">var <span class="ident">LAVENDERBLUSH</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LAWNGREEN"><code class="name">var <span class="ident">LAWNGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LEMONCHIFFON"><code class="name">var <span class="ident">LEMONCHIFFON</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIGHTBLUE"><code class="name">var <span class="ident">LIGHTBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIGHTCORAL"><code class="name">var <span class="ident">LIGHTCORAL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIGHTCYAN"><code class="name">var <span class="ident">LIGHTCYAN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIGHTGOLDENRODYELLOW"><code class="name">var <span class="ident">LIGHTGOLDENRODYELLOW</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIGHTGRAY"><code class="name">var <span class="ident">LIGHTGRAY</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIGHTGREEN"><code class="name">var <span class="ident">LIGHTGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIGHTPINK"><code class="name">var <span class="ident">LIGHTPINK</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIGHTSALMON"><code class="name">var <span class="ident">LIGHTSALMON</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIGHTSEAGREEN"><code class="name">var <span class="ident">LIGHTSEAGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIGHTSKYBLUE"><code class="name">var <span class="ident">LIGHTSKYBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIGHTSLATEGRAY"><code class="name">var <span class="ident">LIGHTSLATEGRAY</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIGHTSTEELBLUE"><code class="name">var <span class="ident">LIGHTSTEELBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIGHTYELLOW"><code class="name">var <span class="ident">LIGHTYELLOW</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LIMEGREEN"><code class="name">var <span class="ident">LIMEGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.LINEN"><code class="name">var <span class="ident">LINEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MAGENTA"><code class="name">var <span class="ident">MAGENTA</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MAROON"><code class="name">var <span class="ident">MAROON</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MEDIUMAQUAMARINE"><code class="name">var <span class="ident">MEDIUMAQUAMARINE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MEDIUMBLUE"><code class="name">var <span class="ident">MEDIUMBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MEDIUMORCHID"><code class="name">var <span class="ident">MEDIUMORCHID</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MEDIUMPURPLE"><code class="name">var <span class="ident">MEDIUMPURPLE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MEDIUMSEAGREEN"><code class="name">var <span class="ident">MEDIUMSEAGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MEDIUMSLATEBLUE"><code class="name">var <span class="ident">MEDIUMSLATEBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MEDIUMSPRINGGREEN"><code class="name">var <span class="ident">MEDIUMSPRINGGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MEDIUMTURQUOISE"><code class="name">var <span class="ident">MEDIUMTURQUOISE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MEDIUMVIOLETRED"><code class="name">var <span class="ident">MEDIUMVIOLETRED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MIDNIGHTBLUE"><code class="name">var <span class="ident">MIDNIGHTBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MINTCREAM"><code class="name">var <span class="ident">MINTCREAM</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MISTYROSE"><code class="name">var <span class="ident">MISTYROSE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.MOCCASIN"><code class="name">var <span class="ident">MOCCASIN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.NAVAJOWHITE"><code class="name">var <span class="ident">NAVAJOWHITE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.NAVY"><code class="name">var <span class="ident">NAVY</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.OLDLACE"><code class="name">var <span class="ident">OLDLACE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.OLIVE"><code class="name">var <span class="ident">OLIVE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.OLIVEDRAB"><code class="name">var <span class="ident">OLIVEDRAB</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.ORANGE"><code class="name">var <span class="ident">ORANGE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.ORANGERED"><code class="name">var <span class="ident">ORANGERED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.ORCHID"><code class="name">var <span class="ident">ORCHID</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.PALEGOLDENROD"><code class="name">var <span class="ident">PALEGOLDENROD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.PALEGREEN"><code class="name">var <span class="ident">PALEGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.PALETURQUOISE"><code class="name">var <span class="ident">PALETURQUOISE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.PALEVIOLETRED"><code class="name">var <span class="ident">PALEVIOLETRED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.PAPAYAWHIP"><code class="name">var <span class="ident">PAPAYAWHIP</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.PEACHPUFF"><code class="name">var <span class="ident">PEACHPUFF</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.PERU"><code class="name">var <span class="ident">PERU</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.PINK"><code class="name">var <span class="ident">PINK</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.PLUM"><code class="name">var <span class="ident">PLUM</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.POWDERBLUE"><code class="name">var <span class="ident">POWDERBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.PURPLE"><code class="name">var <span class="ident">PURPLE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.REBECCAPURPLE"><code class="name">var <span class="ident">REBECCAPURPLE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.RED"><code class="name">var <span class="ident">RED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.ROSYBROWN"><code class="name">var <span class="ident">ROSYBROWN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.ROYALBLUE"><code class="name">var <span class="ident">ROYALBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.SADDLEBROWN"><code class="name">var <span class="ident">SADDLEBROWN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.SALMON"><code class="name">var <span class="ident">SALMON</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.SANDYBROWN"><code class="name">var <span class="ident">SANDYBROWN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.SEAGREEN"><code class="name">var <span class="ident">SEAGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.SEASHELL"><code class="name">var <span class="ident">SEASHELL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.SIENNA"><code class="name">var <span class="ident">SIENNA</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.SILVER"><code class="name">var <span class="ident">SILVER</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.SKYBLUE"><code class="name">var <span class="ident">SKYBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.SLATEBLUE"><code class="name">var <span class="ident">SLATEBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.SLATEGRAY"><code class="name">var <span class="ident">SLATEGRAY</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.SNOW"><code class="name">var <span class="ident">SNOW</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.SPRINGGREEN"><code class="name">var <span class="ident">SPRINGGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.STEELBLUE"><code class="name">var <span class="ident">STEELBLUE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.TAN"><code class="name">var <span class="ident">TAN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.TEAL"><code class="name">var <span class="ident">TEAL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.THISTLE"><code class="name">var <span class="ident">THISTLE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.TOMATO"><code class="name">var <span class="ident">TOMATO</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.TURQUOISE"><code class="name">var <span class="ident">TURQUOISE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.VIOLET"><code class="name">var <span class="ident">VIOLET</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.WHEAT"><code class="name">var <span class="ident">WHEAT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.WHITE"><code class="name">var <span class="ident">WHITE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.WHITESMOKE"><code class="name">var <span class="ident">WHITESMOKE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.YELLOW"><code class="name">var <span class="ident">YELLOW</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.display.NamedColor.YELLOWGREEN"><code class="name">var <span class="ident">YELLOWGREEN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="../../assets/tingle/0.15.3/tingle.min.css">
+<script src="../../assets/tingle/0.15.3/tingle.min.js"></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = '../../doc-search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="fnpcell.pdk.technology" href="index.html">fnpcell.pdk.technology</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.display.Color" href="#fnpcell.pdk.technology.display.Color">Color</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.display.Color.with_alpha" href="#fnpcell.pdk.technology.display.Color.with_alpha">with_alpha</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.display.FillPattern" href="#fnpcell.pdk.technology.display.FillPattern">FillPattern</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.pdk.technology.display.FillPattern.BACK_DIAGONAL" href="#fnpcell.pdk.technology.display.FillPattern.BACK_DIAGONAL">BACK_DIAGONAL</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.FillPattern.DIAGONAL" href="#fnpcell.pdk.technology.display.FillPattern.DIAGONAL">DIAGONAL</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.FillPattern.DOTTED" href="#fnpcell.pdk.technology.display.FillPattern.DOTTED">DOTTED</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.FillPattern.GRID" href="#fnpcell.pdk.technology.display.FillPattern.GRID">GRID</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.FillPattern.HOLLOW" href="#fnpcell.pdk.technology.display.FillPattern.HOLLOW">HOLLOW</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.FillPattern.SOLID" href="#fnpcell.pdk.technology.display.FillPattern.SOLID">SOLID</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.display.LayerFill" href="#fnpcell.pdk.technology.display.LayerFill">LayerFill</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.display.LayerFill.color" href="#fnpcell.pdk.technology.display.LayerFill.color">color</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.LayerFill.pattern" href="#fnpcell.pdk.technology.display.LayerFill.pattern">pattern</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.display.LayerStroke" href="#fnpcell.pdk.technology.display.LayerStroke">LayerStroke</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.display.LayerStroke.color" href="#fnpcell.pdk.technology.display.LayerStroke.color">color</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.LayerStroke.width" href="#fnpcell.pdk.technology.display.LayerStroke.width">width</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.display.LayerStyle" href="#fnpcell.pdk.technology.display.LayerStyle">LayerStyle</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.display.LayerStyle.fill" href="#fnpcell.pdk.technology.display.LayerStyle.fill">fill</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.LayerStyle.stroke" href="#fnpcell.pdk.technology.display.LayerStyle.stroke">stroke</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.display.LayerStyleSet" href="#fnpcell.pdk.technology.display.LayerStyleSet">LayerStyleSet</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.display.LayerStyleSet.get" href="#fnpcell.pdk.technology.display.LayerStyleSet.get">get</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.LayerStyleSet.random" href="#fnpcell.pdk.technology.display.LayerStyleSet.random">random</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.LayerStyleSet.updated" href="#fnpcell.pdk.technology.display.LayerStyleSet.updated">updated</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.display.NamedColor" href="#fnpcell.pdk.technology.display.NamedColor">NamedColor</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.ALICEBLUE" href="#fnpcell.pdk.technology.display.NamedColor.ALICEBLUE">ALICEBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.ANTIQUEWHITE" href="#fnpcell.pdk.technology.display.NamedColor.ANTIQUEWHITE">ANTIQUEWHITE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.AQUAMARINE" href="#fnpcell.pdk.technology.display.NamedColor.AQUAMARINE">AQUAMARINE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.AZURE" href="#fnpcell.pdk.technology.display.NamedColor.AZURE">AZURE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.BEIGE" href="#fnpcell.pdk.technology.display.NamedColor.BEIGE">BEIGE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.BISQUE" href="#fnpcell.pdk.technology.display.NamedColor.BISQUE">BISQUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.BLACK" href="#fnpcell.pdk.technology.display.NamedColor.BLACK">BLACK</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.BLANCHEDALMOND" href="#fnpcell.pdk.technology.display.NamedColor.BLANCHEDALMOND">BLANCHEDALMOND</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.BLUE" href="#fnpcell.pdk.technology.display.NamedColor.BLUE">BLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.BLUEVIOLET" href="#fnpcell.pdk.technology.display.NamedColor.BLUEVIOLET">BLUEVIOLET</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.BROWN" href="#fnpcell.pdk.technology.display.NamedColor.BROWN">BROWN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.BURLYWOOD" href="#fnpcell.pdk.technology.display.NamedColor.BURLYWOOD">BURLYWOOD</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.CADETBLUE" href="#fnpcell.pdk.technology.display.NamedColor.CADETBLUE">CADETBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.CHARTREUSE" href="#fnpcell.pdk.technology.display.NamedColor.CHARTREUSE">CHARTREUSE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.CHOCOLATE" href="#fnpcell.pdk.technology.display.NamedColor.CHOCOLATE">CHOCOLATE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.CORAL" href="#fnpcell.pdk.technology.display.NamedColor.CORAL">CORAL</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.CORNFLOWERBLUE" href="#fnpcell.pdk.technology.display.NamedColor.CORNFLOWERBLUE">CORNFLOWERBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.CORNSILK" href="#fnpcell.pdk.technology.display.NamedColor.CORNSILK">CORNSILK</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.CRIMSON" href="#fnpcell.pdk.technology.display.NamedColor.CRIMSON">CRIMSON</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.CYAN" href="#fnpcell.pdk.technology.display.NamedColor.CYAN">CYAN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKBLUE" href="#fnpcell.pdk.technology.display.NamedColor.DARKBLUE">DARKBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKCYAN" href="#fnpcell.pdk.technology.display.NamedColor.DARKCYAN">DARKCYAN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKGOLDENROD" href="#fnpcell.pdk.technology.display.NamedColor.DARKGOLDENROD">DARKGOLDENROD</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKGRAY" href="#fnpcell.pdk.technology.display.NamedColor.DARKGRAY">DARKGRAY</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKGREEN" href="#fnpcell.pdk.technology.display.NamedColor.DARKGREEN">DARKGREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKKHAKI" href="#fnpcell.pdk.technology.display.NamedColor.DARKKHAKI">DARKKHAKI</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKMAGENTA" href="#fnpcell.pdk.technology.display.NamedColor.DARKMAGENTA">DARKMAGENTA</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKOLIVEGREEN" href="#fnpcell.pdk.technology.display.NamedColor.DARKOLIVEGREEN">DARKOLIVEGREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKORANGE" href="#fnpcell.pdk.technology.display.NamedColor.DARKORANGE">DARKORANGE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKORCHID" href="#fnpcell.pdk.technology.display.NamedColor.DARKORCHID">DARKORCHID</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKRED" href="#fnpcell.pdk.technology.display.NamedColor.DARKRED">DARKRED</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKSALMON" href="#fnpcell.pdk.technology.display.NamedColor.DARKSALMON">DARKSALMON</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKSEAGREEN" href="#fnpcell.pdk.technology.display.NamedColor.DARKSEAGREEN">DARKSEAGREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKSLATEBLUE" href="#fnpcell.pdk.technology.display.NamedColor.DARKSLATEBLUE">DARKSLATEBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKSLATEGRAY" href="#fnpcell.pdk.technology.display.NamedColor.DARKSLATEGRAY">DARKSLATEGRAY</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKTURQUOISE" href="#fnpcell.pdk.technology.display.NamedColor.DARKTURQUOISE">DARKTURQUOISE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DARKVIOLET" href="#fnpcell.pdk.technology.display.NamedColor.DARKVIOLET">DARKVIOLET</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DEEPPINK" href="#fnpcell.pdk.technology.display.NamedColor.DEEPPINK">DEEPPINK</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DEEPSKYBLUE" href="#fnpcell.pdk.technology.display.NamedColor.DEEPSKYBLUE">DEEPSKYBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DIMGRAY" href="#fnpcell.pdk.technology.display.NamedColor.DIMGRAY">DIMGRAY</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.DODGERBLUE" href="#fnpcell.pdk.technology.display.NamedColor.DODGERBLUE">DODGERBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.FIREBRICK" href="#fnpcell.pdk.technology.display.NamedColor.FIREBRICK">FIREBRICK</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.FLORALWHITE" href="#fnpcell.pdk.technology.display.NamedColor.FLORALWHITE">FLORALWHITE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.FORESTGREEN" href="#fnpcell.pdk.technology.display.NamedColor.FORESTGREEN">FORESTGREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.FUCHSIA" href="#fnpcell.pdk.technology.display.NamedColor.FUCHSIA">FUCHSIA</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.GAINSBORO" href="#fnpcell.pdk.technology.display.NamedColor.GAINSBORO">GAINSBORO</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.GHOSTWHITE" href="#fnpcell.pdk.technology.display.NamedColor.GHOSTWHITE">GHOSTWHITE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.GOLD" href="#fnpcell.pdk.technology.display.NamedColor.GOLD">GOLD</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.GOLDENROD" href="#fnpcell.pdk.technology.display.NamedColor.GOLDENROD">GOLDENROD</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.GRAY" href="#fnpcell.pdk.technology.display.NamedColor.GRAY">GRAY</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.GREEN" href="#fnpcell.pdk.technology.display.NamedColor.GREEN">GREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.GREENYELLOW" href="#fnpcell.pdk.technology.display.NamedColor.GREENYELLOW">GREENYELLOW</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.HONEYDEW" href="#fnpcell.pdk.technology.display.NamedColor.HONEYDEW">HONEYDEW</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.HOTPINK" href="#fnpcell.pdk.technology.display.NamedColor.HOTPINK">HOTPINK</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.INDIANRED" href="#fnpcell.pdk.technology.display.NamedColor.INDIANRED">INDIANRED</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.INDIGO" href="#fnpcell.pdk.technology.display.NamedColor.INDIGO">INDIGO</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.IVORY" href="#fnpcell.pdk.technology.display.NamedColor.IVORY">IVORY</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.KHAKI" href="#fnpcell.pdk.technology.display.NamedColor.KHAKI">KHAKI</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LAVENDER" href="#fnpcell.pdk.technology.display.NamedColor.LAVENDER">LAVENDER</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LAVENDERBLUSH" href="#fnpcell.pdk.technology.display.NamedColor.LAVENDERBLUSH">LAVENDERBLUSH</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LAWNGREEN" href="#fnpcell.pdk.technology.display.NamedColor.LAWNGREEN">LAWNGREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LEMONCHIFFON" href="#fnpcell.pdk.technology.display.NamedColor.LEMONCHIFFON">LEMONCHIFFON</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIGHTBLUE" href="#fnpcell.pdk.technology.display.NamedColor.LIGHTBLUE">LIGHTBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIGHTCORAL" href="#fnpcell.pdk.technology.display.NamedColor.LIGHTCORAL">LIGHTCORAL</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIGHTCYAN" href="#fnpcell.pdk.technology.display.NamedColor.LIGHTCYAN">LIGHTCYAN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIGHTGOLDENRODYELLOW" href="#fnpcell.pdk.technology.display.NamedColor.LIGHTGOLDENRODYELLOW">LIGHTGOLDENRODYELLOW</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIGHTGRAY" href="#fnpcell.pdk.technology.display.NamedColor.LIGHTGRAY">LIGHTGRAY</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIGHTGREEN" href="#fnpcell.pdk.technology.display.NamedColor.LIGHTGREEN">LIGHTGREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIGHTPINK" href="#fnpcell.pdk.technology.display.NamedColor.LIGHTPINK">LIGHTPINK</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIGHTSALMON" href="#fnpcell.pdk.technology.display.NamedColor.LIGHTSALMON">LIGHTSALMON</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIGHTSEAGREEN" href="#fnpcell.pdk.technology.display.NamedColor.LIGHTSEAGREEN">LIGHTSEAGREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIGHTSKYBLUE" href="#fnpcell.pdk.technology.display.NamedColor.LIGHTSKYBLUE">LIGHTSKYBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIGHTSLATEGRAY" href="#fnpcell.pdk.technology.display.NamedColor.LIGHTSLATEGRAY">LIGHTSLATEGRAY</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIGHTSTEELBLUE" href="#fnpcell.pdk.technology.display.NamedColor.LIGHTSTEELBLUE">LIGHTSTEELBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIGHTYELLOW" href="#fnpcell.pdk.technology.display.NamedColor.LIGHTYELLOW">LIGHTYELLOW</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LIMEGREEN" href="#fnpcell.pdk.technology.display.NamedColor.LIMEGREEN">LIMEGREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.LINEN" href="#fnpcell.pdk.technology.display.NamedColor.LINEN">LINEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MAGENTA" href="#fnpcell.pdk.technology.display.NamedColor.MAGENTA">MAGENTA</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MAROON" href="#fnpcell.pdk.technology.display.NamedColor.MAROON">MAROON</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MEDIUMAQUAMARINE" href="#fnpcell.pdk.technology.display.NamedColor.MEDIUMAQUAMARINE">MEDIUMAQUAMARINE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MEDIUMBLUE" href="#fnpcell.pdk.technology.display.NamedColor.MEDIUMBLUE">MEDIUMBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MEDIUMORCHID" href="#fnpcell.pdk.technology.display.NamedColor.MEDIUMORCHID">MEDIUMORCHID</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MEDIUMPURPLE" href="#fnpcell.pdk.technology.display.NamedColor.MEDIUMPURPLE">MEDIUMPURPLE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MEDIUMSEAGREEN" href="#fnpcell.pdk.technology.display.NamedColor.MEDIUMSEAGREEN">MEDIUMSEAGREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MEDIUMSLATEBLUE" href="#fnpcell.pdk.technology.display.NamedColor.MEDIUMSLATEBLUE">MEDIUMSLATEBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MEDIUMSPRINGGREEN" href="#fnpcell.pdk.technology.display.NamedColor.MEDIUMSPRINGGREEN">MEDIUMSPRINGGREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MEDIUMTURQUOISE" href="#fnpcell.pdk.technology.display.NamedColor.MEDIUMTURQUOISE">MEDIUMTURQUOISE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MEDIUMVIOLETRED" href="#fnpcell.pdk.technology.display.NamedColor.MEDIUMVIOLETRED">MEDIUMVIOLETRED</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MIDNIGHTBLUE" href="#fnpcell.pdk.technology.display.NamedColor.MIDNIGHTBLUE">MIDNIGHTBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MINTCREAM" href="#fnpcell.pdk.technology.display.NamedColor.MINTCREAM">MINTCREAM</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MISTYROSE" href="#fnpcell.pdk.technology.display.NamedColor.MISTYROSE">MISTYROSE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.MOCCASIN" href="#fnpcell.pdk.technology.display.NamedColor.MOCCASIN">MOCCASIN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.NAVAJOWHITE" href="#fnpcell.pdk.technology.display.NamedColor.NAVAJOWHITE">NAVAJOWHITE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.NAVY" href="#fnpcell.pdk.technology.display.NamedColor.NAVY">NAVY</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.OLDLACE" href="#fnpcell.pdk.technology.display.NamedColor.OLDLACE">OLDLACE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.OLIVE" href="#fnpcell.pdk.technology.display.NamedColor.OLIVE">OLIVE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.OLIVEDRAB" href="#fnpcell.pdk.technology.display.NamedColor.OLIVEDRAB">OLIVEDRAB</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.ORANGE" href="#fnpcell.pdk.technology.display.NamedColor.ORANGE">ORANGE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.ORANGERED" href="#fnpcell.pdk.technology.display.NamedColor.ORANGERED">ORANGERED</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.ORCHID" href="#fnpcell.pdk.technology.display.NamedColor.ORCHID">ORCHID</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.PALEGOLDENROD" href="#fnpcell.pdk.technology.display.NamedColor.PALEGOLDENROD">PALEGOLDENROD</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.PALEGREEN" href="#fnpcell.pdk.technology.display.NamedColor.PALEGREEN">PALEGREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.PALETURQUOISE" href="#fnpcell.pdk.technology.display.NamedColor.PALETURQUOISE">PALETURQUOISE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.PALEVIOLETRED" href="#fnpcell.pdk.technology.display.NamedColor.PALEVIOLETRED">PALEVIOLETRED</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.PAPAYAWHIP" href="#fnpcell.pdk.technology.display.NamedColor.PAPAYAWHIP">PAPAYAWHIP</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.PEACHPUFF" href="#fnpcell.pdk.technology.display.NamedColor.PEACHPUFF">PEACHPUFF</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.PERU" href="#fnpcell.pdk.technology.display.NamedColor.PERU">PERU</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.PINK" href="#fnpcell.pdk.technology.display.NamedColor.PINK">PINK</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.PLUM" href="#fnpcell.pdk.technology.display.NamedColor.PLUM">PLUM</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.POWDERBLUE" href="#fnpcell.pdk.technology.display.NamedColor.POWDERBLUE">POWDERBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.PURPLE" href="#fnpcell.pdk.technology.display.NamedColor.PURPLE">PURPLE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.REBECCAPURPLE" href="#fnpcell.pdk.technology.display.NamedColor.REBECCAPURPLE">REBECCAPURPLE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.RED" href="#fnpcell.pdk.technology.display.NamedColor.RED">RED</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.ROSYBROWN" href="#fnpcell.pdk.technology.display.NamedColor.ROSYBROWN">ROSYBROWN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.ROYALBLUE" href="#fnpcell.pdk.technology.display.NamedColor.ROYALBLUE">ROYALBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.SADDLEBROWN" href="#fnpcell.pdk.technology.display.NamedColor.SADDLEBROWN">SADDLEBROWN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.SALMON" href="#fnpcell.pdk.technology.display.NamedColor.SALMON">SALMON</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.SANDYBROWN" href="#fnpcell.pdk.technology.display.NamedColor.SANDYBROWN">SANDYBROWN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.SEAGREEN" href="#fnpcell.pdk.technology.display.NamedColor.SEAGREEN">SEAGREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.SEASHELL" href="#fnpcell.pdk.technology.display.NamedColor.SEASHELL">SEASHELL</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.SIENNA" href="#fnpcell.pdk.technology.display.NamedColor.SIENNA">SIENNA</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.SILVER" href="#fnpcell.pdk.technology.display.NamedColor.SILVER">SILVER</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.SKYBLUE" href="#fnpcell.pdk.technology.display.NamedColor.SKYBLUE">SKYBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.SLATEBLUE" href="#fnpcell.pdk.technology.display.NamedColor.SLATEBLUE">SLATEBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.SLATEGRAY" href="#fnpcell.pdk.technology.display.NamedColor.SLATEGRAY">SLATEGRAY</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.SNOW" href="#fnpcell.pdk.technology.display.NamedColor.SNOW">SNOW</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.SPRINGGREEN" href="#fnpcell.pdk.technology.display.NamedColor.SPRINGGREEN">SPRINGGREEN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.STEELBLUE" href="#fnpcell.pdk.technology.display.NamedColor.STEELBLUE">STEELBLUE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.TAN" href="#fnpcell.pdk.technology.display.NamedColor.TAN">TAN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.TEAL" href="#fnpcell.pdk.technology.display.NamedColor.TEAL">TEAL</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.THISTLE" href="#fnpcell.pdk.technology.display.NamedColor.THISTLE">THISTLE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.TOMATO" href="#fnpcell.pdk.technology.display.NamedColor.TOMATO">TOMATO</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.TURQUOISE" href="#fnpcell.pdk.technology.display.NamedColor.TURQUOISE">TURQUOISE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.VIOLET" href="#fnpcell.pdk.technology.display.NamedColor.VIOLET">VIOLET</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.WHEAT" href="#fnpcell.pdk.technology.display.NamedColor.WHEAT">WHEAT</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.WHITE" href="#fnpcell.pdk.technology.display.NamedColor.WHITE">WHITE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.WHITESMOKE" href="#fnpcell.pdk.technology.display.NamedColor.WHITESMOKE">WHITESMOKE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.YELLOW" href="#fnpcell.pdk.technology.display.NamedColor.YELLOW">YELLOW</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.display.NamedColor.YELLOWGREEN" href="#fnpcell.pdk.technology.display.NamedColor.YELLOWGREEN">YELLOWGREEN</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>

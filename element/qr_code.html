@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>fnpcell.element.qr_code API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="../assets/10up-sanitize.css/11.0.1/sanitize.min.css">
+<link rel="preload stylesheet" as="style" href="../assets/10up-sanitize.css/11.0.1/typography.min.css">
+<link rel="stylesheet preload" as="style" href="../assets/highlight.js/10.1.1/styles/github-dark.min.css">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="../assets/highlight.js/10.1.1/highlight.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>fnpcell.element.qr_code</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="fnpcell.element.qr_code.ErrorCorrection"><code class="flex name class">
+<span>class <span class="ident">ErrorCorrection</span></span>
+<span>(</span><span>i: int, fb: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.element.qr_code.ErrorCorrection.HIGH"><code class="name">var <span class="ident">HIGH</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.ErrorCorrection.LOW"><code class="name">var <span class="ident">LOW</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.ErrorCorrection.MEDIUM"><code class="name">var <span class="ident">MEDIUM</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.ErrorCorrection.QUARTILE"><code class="name">var <span class="ident">QUARTILE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.ErrorCorrection.formatbits"><code class="name">var <span class="ident">formatbits</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.ErrorCorrection.ordinal"><code class="name">var <span class="ident">ordinal</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCode"><code class="flex name class">
+<span>class <span class="ident">QRCode</span></span>
+<span>(</span><span>data: str, layer: <a title="fnpcell.interfaces.ILayer" href="../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a>, invert: bool = False, pixel_size: float = 5, error_correction: <a title="fnpcell.element.qr_code.ErrorCorrection" href="#fnpcell.element.qr_code.ErrorCorrection">ErrorCorrection</a> = ErrorCorrection.HIGH, transform: <a title="fnpcell.transform.Affine2D" href="../transform.html#fnpcell.transform.Affine2D">Affine2D</a> = Affine2D.identity())</span>
+</code></dt>
+<dd>
+<div class="desc"><p>QRCode(<em>args: Any, </em>*kwargs: Any)</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.mixin.transform_mixin.TransformMixin" href="../mixin/transform_mixin.html#fnpcell.mixin.transform_mixin.TransformMixin">TransformMixin</a></li>
+<li><a title="fnpcell.interfaces.IUpdatable" href="../interfaces.html#fnpcell.interfaces.IUpdatable">IUpdatable</a></li>
+<li><a title="fnpcell.interfaces.IGroup" href="../interfaces.html#fnpcell.interfaces.IGroup">IGroup</a></li>
+<li><a title="fnpcell.interfaces.IRunnableContainer" href="../interfaces.html#fnpcell.interfaces.IRunnableContainer">IRunnableContainer</a></li>
+<li>typing.Generic</li>
+<li><a title="fnpcell.interfaces.IPrimitive" href="../interfaces.html#fnpcell.interfaces.IPrimitive">IPrimitive</a></li>
+<li><a title="fnpcell.interfaces.ILayered" href="../interfaces.html#fnpcell.interfaces.ILayered">ILayered</a></li>
+<li><a title="fnpcell.interfaces.IElement" href="../interfaces.html#fnpcell.interfaces.IElement">IElement</a></li>
+<li><a title="fnpcell.interfaces.IRunnable" href="../interfaces.html#fnpcell.interfaces.IRunnable">IRunnable</a></li>
+<li><a title="fnpcell.interfaces.IAffineTransformable" href="../interfaces.html#fnpcell.interfaces.IAffineTransformable">IAffineTransformable</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.element.qr_code.QRCode.data"><code class="name">var <span class="ident">data</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCode.error_correction"><code class="name">var <span class="ident">error_correction</span> : <a title="fnpcell.element.qr_code.ErrorCorrection" href="#fnpcell.element.qr_code.ErrorCorrection">ErrorCorrection</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCode.invert"><code class="name">var <span class="ident">invert</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCode.layer"><code class="name">var <span class="ident">layer</span> : <a title="fnpcell.interfaces.ILayer" href="../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCode.pixel_size"><code class="name">var <span class="ident">pixel_size</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCode.transform"><code class="name">var <span class="ident">transform</span> : <a title="fnpcell.transform.Affine2D" href="../transform.html#fnpcell.transform.Affine2D">Affine2D</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="fnpcell.element.qr_code.QRCode.content"><code class="name">var <span class="ident">content</span> : Tuple[<a title="fnpcell.interfaces.IPrimitive" href="../interfaces.html#fnpcell.interfaces.IPrimitive">IPrimitive</a>, ...]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.element.qr_code.QRCode.c_mirrored"><code class="name flex">
+<span>def <span class="ident">c_mirrored</span></span>(<span>self: ~_Self, *, center: Tuple[float, float] = (0, 0)) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.mixin.transform_mixin.TransformMixin" href="../mixin/transform_mixin.html#fnpcell.mixin.transform_mixin.TransformMixin">TransformMixin</a></code>.<code><a title="fnpcell.mixin.transform_mixin.TransformMixin.c_mirrored" href="../interfaces.html#fnpcell.mixin.transform_mixin.TransformMixin.c_mirrored">c_mirrored</a></code>
+</p>
+<div class="desc inherited"><p>Center mirrored.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCode.h_mirrored"><code class="name flex">
+<span>def <span class="ident">h_mirrored</span></span>(<span>self: ~_Self, *, x: float = 0) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.mixin.transform_mixin.TransformMixin" href="../mixin/transform_mixin.html#fnpcell.mixin.transform_mixin.TransformMixin">TransformMixin</a></code>.<code><a title="fnpcell.mixin.transform_mixin.TransformMixin.h_mirrored" href="../interfaces.html#fnpcell.mixin.transform_mixin.TransformMixin.h_mirrored">h_mirrored</a></code>
+</p>
+<div class="desc inherited"><p>Horizontal mirrored</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCode.rotated"><code class="name flex">
+<span>def <span class="ident">rotated</span></span>(<span>self: ~_Self, *, degrees: Optional[float] = None, radians: Optional[float] = None, origin: Optional[Tuple[float, float]] = None, inplace: Optional[bool] = None) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.mixin.transform_mixin.TransformMixin" href="../mixin/transform_mixin.html#fnpcell.mixin.transform_mixin.TransformMixin">TransformMixin</a></code>.<code><a title="fnpcell.mixin.transform_mixin.TransformMixin.rotated" href="../interfaces.html#fnpcell.mixin.transform_mixin.TransformMixin.rotated">rotated</a></code>
+</p>
+<div class="desc inherited"><p>Return a new cell reference rotated, either degrees or radians must be provided.
+If both provided, radians is used …</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCode.scaled"><code class="name flex">
+<span>def <span class="ident">scaled</span></span>(<span>self: ~_Self, sx: float, sy: Optional[float] = None, *, center: Tuple[float, float] = (0, 0)) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.mixin.transform_mixin.TransformMixin" href="../mixin/transform_mixin.html#fnpcell.mixin.transform_mixin.TransformMixin">TransformMixin</a></code>.<code><a title="fnpcell.mixin.transform_mixin.TransformMixin.scaled" href="../interfaces.html#fnpcell.mixin.transform_mixin.TransformMixin.scaled">scaled</a></code>
+</p>
+<div class="desc inherited"><p>scaled at center.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCode.translated"><code class="name flex">
+<span>def <span class="ident">translated</span></span>(<span>self: ~_Self, tx: float, ty: float) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.mixin.transform_mixin.TransformMixin" href="../mixin/transform_mixin.html#fnpcell.mixin.transform_mixin.TransformMixin">TransformMixin</a></code>.<code><a title="fnpcell.mixin.transform_mixin.TransformMixin.translated" href="../interfaces.html#fnpcell.mixin.transform_mixin.TransformMixin.translated">translated</a></code>
+</p>
+<div class="desc inherited"><p>Translated.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCode.ungrouped"><code class="name flex">
+<span>def <span class="ident">ungrouped</span></span>(<span>self) ‑> Tuple[<a title="fnpcell.interfaces.IPrimitive" href="../interfaces.html#fnpcell.interfaces.IPrimitive">IPrimitive</a>, ...]</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.interfaces.IGroup" href="../interfaces.html#fnpcell.interfaces.IGroup">IGroup</a></code>.<code><a title="fnpcell.interfaces.IGroup.ungrouped" href="../interfaces.html#fnpcell.interfaces.IGroup.ungrouped">ungrouped</a></code>
+</p>
+<div class="desc inherited"><p>ungrouped self in recursion …</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCode.v_mirrored"><code class="name flex">
+<span>def <span class="ident">v_mirrored</span></span>(<span>self: ~_Self, *, y: float = 0) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.mixin.transform_mixin.TransformMixin" href="../mixin/transform_mixin.html#fnpcell.mixin.transform_mixin.TransformMixin">TransformMixin</a></code>.<code><a title="fnpcell.mixin.transform_mixin.TransformMixin.v_mirrored" href="../interfaces.html#fnpcell.mixin.transform_mixin.TransformMixin.v_mirrored">v_mirrored</a></code>
+</p>
+<div class="desc inherited"><p>Vertical mirrored.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCode.with_layer"><code class="name flex">
+<span>def <span class="ident">with_layer</span></span>(<span>self, layer: <a title="fnpcell.interfaces.ILayer" href="../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCodeModel"><code class="flex name class">
+<span>class <span class="ident">QRCodeModel</span></span>
+<span>(</span><span>version: int, errcorlvl: <a title="fnpcell.element.qr_code.ErrorCorrection" href="#fnpcell.element.qr_code.ErrorCorrection">ErrorCorrection</a>, datacodewords: Union[bytes, Sequence[int]], msk: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A QR Code symbol, which is a type of two-dimension barcode.
+Invented by Denso Wave and described in the ISO/IEC 18004 standard.
+Instances of this class represent an immutable square grid of dark and light cells.
+The class provides static factory functions to create a QR Code from text or binary data.
+The class covers the QR Code Model 2 specification, supporting all versions (sizes)
+from 1 to 40, all 4 error correction levels, and 4 character encoding modes.</p>
+<p>Ways to create a QR Code object:
+- High level: Take the payload data and call QRCode.encode_text() or QRCode.encode_binary().
+- Mid level: Custom-make the list of segments and call QRCode.encode_segments().
+- Low level: Custom-make the array of data codeword bytes (including
+segment headers and final padding, excluding error correction codewords),
+supply the appropriate version number, and call the QRCode() constructor.
+(Note that all ways require supplying the desired error correction level.)</p>
+<p>Creates a new QR Code with the given version number,
+error correction level, data codeword bytes, and mask number.
+This is a low-level API that most users should not use directly.
+A mid-level API is the encode_segments() function.</p></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.element.qr_code.QRCodeModel.MAX_VERSION"><code class="name">var <span class="ident">MAX_VERSION</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCodeModel.MIN_VERSION"><code class="name">var <span class="ident">MIN_VERSION</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Static methods</h3>
+<dl>
+<dt id="fnpcell.element.qr_code.QRCodeModel.encode_binary"><code class="name flex">
+<span>def <span class="ident">encode_binary</span></span>(<span>data: Union[bytes, Sequence[int]], ecl: <a title="fnpcell.element.qr_code.ErrorCorrection" href="#fnpcell.element.qr_code.ErrorCorrection">ErrorCorrection</a>) ‑> <a title="fnpcell.element.qr_code.QRCodeModel" href="#fnpcell.element.qr_code.QRCodeModel">QRCodeModel</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a QR Code representing the given binary data at the given error correction level.
+This function always encodes using the binary segment mode, not any text mode. The maximum number of
+bytes allowed is 2953. The smallest possible QR Code version is automatically chosen for the output.
+The ECC level of the result may be higher than the ecl argument if it can be done without increasing the version.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCodeModel.encode_segments"><code class="name flex">
+<span>def <span class="ident">encode_segments</span></span>(<span>segs: Sequence[ForwardRef('<a title="fnpcell.element.qr_code.Segment" href="#fnpcell.element.qr_code.Segment">Segment</a>')], ecl: <a title="fnpcell.element.qr_code.ErrorCorrection" href="#fnpcell.element.qr_code.ErrorCorrection">ErrorCorrection</a>, minversion: int = 1, maxversion: int = 40, mask: int = -1, boostecl: bool = True) ‑> <a title="fnpcell.element.qr_code.QRCodeModel" href="#fnpcell.element.qr_code.QRCodeModel">QRCodeModel</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a QR Code representing the given segments with the given encoding parameters.
+The smallest possible QR Code version within the given range is automatically
+chosen for the output. Iff boostecl is true, then the ECC level of the result
+may be higher than the ecl argument if it can be done without increasing the
+version. The mask number is either between 0 to 7 (inclusive) to force that
+mask, or -1 to automatically choose an appropriate mask (which may be slow).
+This function allows the user to create a custom sequence of segments that switches
+between modes (such as alphanumeric and byte) to encode text in less space.
+This is a mid-level API; the high-level API is encode_text() and encode_binary().</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCodeModel.encode_text"><code class="name flex">
+<span>def <span class="ident">encode_text</span></span>(<span>text: str, ecl: <a title="fnpcell.element.qr_code.ErrorCorrection" href="#fnpcell.element.qr_code.ErrorCorrection">ErrorCorrection</a>) ‑> <a title="fnpcell.element.qr_code.QRCodeModel" href="#fnpcell.element.qr_code.QRCodeModel">QRCodeModel</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a QR Code representing the given Unicode text string at the given error correction level.
+As a conservative upper bound, this function is guaranteed to succeed for strings that have 738 or fewer
+Unicode code points (not UTF-16 code units) if the low error correction level is used. The smallest possible
+QR Code version is automatically chosen for the output. The ECC level of the result may be higher than the
+ecl argument if it can be done without increasing the version.</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.element.qr_code.QRCodeModel.get_error_correction_level"><code class="name flex">
+<span>def <span class="ident">get_error_correction_level</span></span>(<span>self) ‑> <a title="fnpcell.element.qr_code.ErrorCorrection" href="#fnpcell.element.qr_code.ErrorCorrection">ErrorCorrection</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns this QR Code's error correction level.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCodeModel.get_mask"><code class="name flex">
+<span>def <span class="ident">get_mask</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns this QR Code's mask, in the range [0, 7].</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCodeModel.get_module"><code class="name flex">
+<span>def <span class="ident">get_module</span></span>(<span>self, x: int, y: int) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the color of the module (pixel) at the given coordinates, which is False
+for light or True for dark. The top left corner has the coordinates (x=0, y=0).
+If the given coordinates are out of bounds, then False (light) is returned.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCodeModel.get_size"><code class="name flex">
+<span>def <span class="ident">get_size</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns this QR Code's size, in the range [21, 177].</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.QRCodeModel.get_version"><code class="name flex">
+<span>def <span class="ident">get_version</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns this QR Code's version number, in the range [1, 40].</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.element.qr_code.Segment"><code class="flex name class">
+<span>class <span class="ident">Segment</span></span>
+<span>(</span><span>mode: <a title="fnpcell.element.qr_code.SegmentMode" href="#fnpcell.element.qr_code.SegmentMode">SegmentMode</a>, numch: int, bitdata: Sequence[int])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A segment of character/binary/control data in a QR Code symbol.
+Instances of this class are immutable.
+The mid-level way to create a segment is to take the payload data
+and call a static factory function such as QrSegment.make_numeric().
+The low-level way to create a segment is to custom-make the bit buffer
+and call the QrSegment() constructor with appropriate values.
+This segment class imposes no length restrictions, but QR Codes have restrictions.
+Even in the most favorable conditions, a QR Code can only hold 7089 characters of data.
+Any segment longer than this is meaningless for the purpose of generating QR Codes.</p>
+<p>Creates a new QR Code segment with the given attributes and data.
+The character count (numch) must agree with the mode and the bit buffer length,
+but the constraint isn't checked. The given bit buffer is cloned and stored.</p></div>
+<h3>Static methods</h3>
+<dl>
+<dt id="fnpcell.element.qr_code.Segment.get_total_bits"><code class="name flex">
+<span>def <span class="ident">get_total_bits</span></span>(<span>segs: Sequence[ForwardRef('<a title="fnpcell.element.qr_code.Segment" href="#fnpcell.element.qr_code.Segment">Segment</a>')], version: int) ‑> Optional[int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calculates the number of bits needed to encode the given segments at
+the given version. Returns a non-negative number if successful. Otherwise
+returns None if a segment has too many characters to fit its length field.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.Segment.is_alphanumeric"><code class="name flex">
+<span>def <span class="ident">is_alphanumeric</span></span>(<span>text: str) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.Segment.is_numeric"><code class="name flex">
+<span>def <span class="ident">is_numeric</span></span>(<span>text: str) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.Segment.make_alphanumeric"><code class="name flex">
+<span>def <span class="ident">make_alphanumeric</span></span>(<span>text: str) ‑> <a title="fnpcell.element.qr_code.Segment" href="#fnpcell.element.qr_code.Segment">Segment</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a segment representing the given text string encoded in alphanumeric mode.
+The characters allowed are: 0 to 9, A to Z (uppercase only), space,
+dollar, percent, asterisk, plus, hyphen, period, slash, colon.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.Segment.make_bytes"><code class="name flex">
+<span>def <span class="ident">make_bytes</span></span>(<span>data: Union[bytes, Sequence[int]]) ‑> <a title="fnpcell.element.qr_code.Segment" href="#fnpcell.element.qr_code.Segment">Segment</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a segment representing the given binary data encoded in byte mode.
+All input byte lists are acceptable. Any text string can be converted to
+UTF-8 bytes (s.encode("UTF-8")) and encoded as a byte mode segment.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.Segment.make_eci"><code class="name flex">
+<span>def <span class="ident">make_eci</span></span>(<span>assignval: int) ‑> <a title="fnpcell.element.qr_code.Segment" href="#fnpcell.element.qr_code.Segment">Segment</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a segment representing an Extended Channel Interpretation
+(ECI) designator with the given assignment value.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.Segment.make_numeric"><code class="name flex">
+<span>def <span class="ident">make_numeric</span></span>(<span>digits: str) ‑> <a title="fnpcell.element.qr_code.Segment" href="#fnpcell.element.qr_code.Segment">Segment</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a segment representing the given string of decimal digits encoded in numeric mode.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.Segment.make_segments"><code class="name flex">
+<span>def <span class="ident">make_segments</span></span>(<span>text: str) ‑> List[<a title="fnpcell.element.qr_code.Segment" href="#fnpcell.element.qr_code.Segment">Segment</a>]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a new mutable list of zero or more segments to represent the given Unicode text string.
+The result may use various segment modes and switch modes to optimize the length of the bit stream.</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.element.qr_code.Segment.get_data"><code class="name flex">
+<span>def <span class="ident">get_data</span></span>(<span>self, copy: bool = True) ‑> List[int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a new copy of the data bits of this segment.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.Segment.get_mode"><code class="name flex">
+<span>def <span class="ident">get_mode</span></span>(<span>self) ‑> <a title="fnpcell.element.qr_code.SegmentMode" href="#fnpcell.element.qr_code.SegmentMode">SegmentMode</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the mode field of this segment.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.Segment.get_num_chars"><code class="name flex">
+<span>def <span class="ident">get_num_chars</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the character count field of this segment.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.element.qr_code.SegmentMode"><code class="flex name class">
+<span>class <span class="ident">SegmentMode</span></span>
+<span>(</span><span>modebits: int, charcounts: Tuple[int, int, int])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Describes how a segment's data bits are interpreted. Immutable.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.element.qr_code.SegmentMode.ALPHANUMERIC"><code class="name">var <span class="ident">ALPHANUMERIC</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.SegmentMode.BYTE"><code class="name">var <span class="ident">BYTE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.SegmentMode.ECI"><code class="name">var <span class="ident">ECI</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.SegmentMode.KANJI"><code class="name">var <span class="ident">KANJI</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.element.qr_code.SegmentMode.NUMERIC"><code class="name">var <span class="ident">NUMERIC</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.element.qr_code.SegmentMode.get_mode_bits"><code class="name flex">
+<span>def <span class="ident">get_mode_bits</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns an unsigned 4-bit integer value (range 0 to 15) representing the mode indicator bits for this mode object.</p></div>
+</dd>
+<dt id="fnpcell.element.qr_code.SegmentMode.num_char_count_bits"><code class="name flex">
+<span>def <span class="ident">num_char_count_bits</span></span>(<span>self, ver: int) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the bit width of the character count field for a segment in this mode
+in a QR Code at the given version number. The result is in the range [0, 16].</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="../assets/tingle/0.15.3/tingle.min.css">
+<script src="../assets/tingle/0.15.3/tingle.min.js"></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = '../doc-search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="fnpcell.element" href="index.html">fnpcell.element</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="fnpcell.element.qr_code.ErrorCorrection" href="#fnpcell.element.qr_code.ErrorCorrection">ErrorCorrection</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.element.qr_code.ErrorCorrection.HIGH" href="#fnpcell.element.qr_code.ErrorCorrection.HIGH">HIGH</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.ErrorCorrection.LOW" href="#fnpcell.element.qr_code.ErrorCorrection.LOW">LOW</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.ErrorCorrection.MEDIUM" href="#fnpcell.element.qr_code.ErrorCorrection.MEDIUM">MEDIUM</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.ErrorCorrection.QUARTILE" href="#fnpcell.element.qr_code.ErrorCorrection.QUARTILE">QUARTILE</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.ErrorCorrection.formatbits" href="#fnpcell.element.qr_code.ErrorCorrection.formatbits">formatbits</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.ErrorCorrection.ordinal" href="#fnpcell.element.qr_code.ErrorCorrection.ordinal">ordinal</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.element.qr_code.QRCode" href="#fnpcell.element.qr_code.QRCode">QRCode</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.element.qr_code.QRCode.c_mirrored" href="../interfaces.html#fnpcell.element.qr_code.QRCode.c_mirrored">c_mirrored</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.content" href="#fnpcell.element.qr_code.QRCode.content">content</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.data" href="#fnpcell.element.qr_code.QRCode.data">data</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.error_correction" href="#fnpcell.element.qr_code.QRCode.error_correction">error_correction</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.h_mirrored" href="../interfaces.html#fnpcell.element.qr_code.QRCode.h_mirrored">h_mirrored</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.invert" href="#fnpcell.element.qr_code.QRCode.invert">invert</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.layer" href="#fnpcell.element.qr_code.QRCode.layer">layer</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.pixel_size" href="#fnpcell.element.qr_code.QRCode.pixel_size">pixel_size</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.rotated" href="../interfaces.html#fnpcell.element.qr_code.QRCode.rotated">rotated</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.scaled" href="../interfaces.html#fnpcell.element.qr_code.QRCode.scaled">scaled</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.transform" href="#fnpcell.element.qr_code.QRCode.transform">transform</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.translated" href="../interfaces.html#fnpcell.element.qr_code.QRCode.translated">translated</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.ungrouped" href="../interfaces.html#fnpcell.element.qr_code.QRCode.ungrouped">ungrouped</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.v_mirrored" href="../interfaces.html#fnpcell.element.qr_code.QRCode.v_mirrored">v_mirrored</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCode.with_layer" href="#fnpcell.element.qr_code.QRCode.with_layer">with_layer</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.element.qr_code.QRCodeModel" href="#fnpcell.element.qr_code.QRCodeModel">QRCodeModel</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.element.qr_code.QRCodeModel.MAX_VERSION" href="#fnpcell.element.qr_code.QRCodeModel.MAX_VERSION">MAX_VERSION</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCodeModel.MIN_VERSION" href="#fnpcell.element.qr_code.QRCodeModel.MIN_VERSION">MIN_VERSION</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCodeModel.encode_binary" href="#fnpcell.element.qr_code.QRCodeModel.encode_binary">encode_binary</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCodeModel.encode_segments" href="#fnpcell.element.qr_code.QRCodeModel.encode_segments">encode_segments</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCodeModel.encode_text" href="#fnpcell.element.qr_code.QRCodeModel.encode_text">encode_text</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCodeModel.get_error_correction_level" href="#fnpcell.element.qr_code.QRCodeModel.get_error_correction_level">get_error_correction_level</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCodeModel.get_mask" href="#fnpcell.element.qr_code.QRCodeModel.get_mask">get_mask</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCodeModel.get_module" href="#fnpcell.element.qr_code.QRCodeModel.get_module">get_module</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCodeModel.get_size" href="#fnpcell.element.qr_code.QRCodeModel.get_size">get_size</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.QRCodeModel.get_version" href="#fnpcell.element.qr_code.QRCodeModel.get_version">get_version</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.element.qr_code.Segment" href="#fnpcell.element.qr_code.Segment">Segment</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.element.qr_code.Segment.get_data" href="#fnpcell.element.qr_code.Segment.get_data">get_data</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.Segment.get_mode" href="#fnpcell.element.qr_code.Segment.get_mode">get_mode</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.Segment.get_num_chars" href="#fnpcell.element.qr_code.Segment.get_num_chars">get_num_chars</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.Segment.get_total_bits" href="#fnpcell.element.qr_code.Segment.get_total_bits">get_total_bits</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.Segment.is_alphanumeric" href="#fnpcell.element.qr_code.Segment.is_alphanumeric">is_alphanumeric</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.Segment.is_numeric" href="#fnpcell.element.qr_code.Segment.is_numeric">is_numeric</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.Segment.make_alphanumeric" href="#fnpcell.element.qr_code.Segment.make_alphanumeric">make_alphanumeric</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.Segment.make_bytes" href="#fnpcell.element.qr_code.Segment.make_bytes">make_bytes</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.Segment.make_eci" href="#fnpcell.element.qr_code.Segment.make_eci">make_eci</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.Segment.make_numeric" href="#fnpcell.element.qr_code.Segment.make_numeric">make_numeric</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.Segment.make_segments" href="#fnpcell.element.qr_code.Segment.make_segments">make_segments</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.element.qr_code.SegmentMode" href="#fnpcell.element.qr_code.SegmentMode">SegmentMode</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.element.qr_code.SegmentMode.ALPHANUMERIC" href="#fnpcell.element.qr_code.SegmentMode.ALPHANUMERIC">ALPHANUMERIC</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.SegmentMode.BYTE" href="#fnpcell.element.qr_code.SegmentMode.BYTE">BYTE</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.SegmentMode.ECI" href="#fnpcell.element.qr_code.SegmentMode.ECI">ECI</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.SegmentMode.KANJI" href="#fnpcell.element.qr_code.SegmentMode.KANJI">KANJI</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.SegmentMode.NUMERIC" href="#fnpcell.element.qr_code.SegmentMode.NUMERIC">NUMERIC</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.SegmentMode.get_mode_bits" href="#fnpcell.element.qr_code.SegmentMode.get_mode_bits">get_mode_bits</a></code></li>
+<li><code><a title="fnpcell.element.qr_code.SegmentMode.num_char_count_bits" href="#fnpcell.element.qr_code.SegmentMode.num_char_count_bits">num_char_count_bits</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>

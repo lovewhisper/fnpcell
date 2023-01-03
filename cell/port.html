@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>fnpcell.cell.port API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="../assets/10up-sanitize.css/11.0.1/sanitize.min.css">
+<link rel="preload stylesheet" as="style" href="../assets/10up-sanitize.css/11.0.1/typography.min.css">
+<link rel="stylesheet preload" as="style" href="../assets/highlight.js/10.1.1/styles/github-dark.min.css">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="../assets/highlight.js/10.1.1/highlight.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>fnpcell.cell.port</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="fnpcell.cell.port.new_port"><code class="name flex">
+<span>def <span class="ident">new_port</span></span>(<span>*, name: Union[None, str, <a title="fnpcell.interfaces.Hidden" href="../interfaces.html#fnpcell.interfaces.Hidden">Hidden</a>], position: Optional[Tuple[float, float]] = None, orientation: Optional[float] = None, at: Optional[<a title="fnpcell.interfaces.IRay" href="../interfaces.html#fnpcell.interfaces.IRay">IRay</a>] = None, waveguide_type: <a title="fnpcell.interfaces.IWaveguideType" href="../interfaces.html#fnpcell.interfaces.IWaveguideType">IWaveguideType</a>, shape: Optional[<a title="fnpcell.interfaces.IShape" href="../interfaces.html#fnpcell.interfaces.IShape">IShape</a>] = None) ‑> <a title="fnpcell.interfaces.IPort" href="../interfaces.html#fnpcell.interfaces.IPort">IPort</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create a new optical port.</p>
+<p>Orientation in radians.</p></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="fnpcell.cell.port.OwnedPort"><code class="flex name class">
+<span>class <span class="ident">OwnedPort</span></span>
+<span>(</span><span>name: Optional[str], raw: <a title="fnpcell.interfaces.IPort" href="../interfaces.html#fnpcell.interfaces.IPort">IPort</a>, owner: <a title="fnpcell.interfaces.ICellRef" href="../interfaces.html#fnpcell.interfaces.ICellRef">ICellRef</a>, assigned_orientation: Optional[float] = None, hidden: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>OwnedPort is for defining a port owned by a CellRef.</p>
+<p>OwnedPort with owner attribute can appoint to it's owner,owner is a CellRef
+Any modification will create new OwnedPort instead of modify the original OwnedPort.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.cell.port._PortMixin</li>
+<li><a title="fnpcell.interfaces.IOwnedPort" href="../interfaces.html#fnpcell.interfaces.IOwnedPort">IOwnedPort</a></li>
+<li><a title="fnpcell.interfaces.IPort" href="../interfaces.html#fnpcell.interfaces.IPort">IPort</a></li>
+<li><a title="fnpcell.interfaces.IOwnedTerminal" href="../interfaces.html#fnpcell.interfaces.IOwnedTerminal">IOwnedTerminal</a></li>
+<li><a title="fnpcell.interfaces.IOwned" href="../interfaces.html#fnpcell.interfaces.IOwned">IOwned</a></li>
+<li><a title="fnpcell.interfaces.ITerminal" href="../interfaces.html#fnpcell.interfaces.ITerminal">ITerminal</a></li>
+<li><a title="fnpcell.interfaces.IUpdatable" href="../interfaces.html#fnpcell.interfaces.IUpdatable">IUpdatable</a></li>
+<li><a title="fnpcell.interfaces.IRay" href="../interfaces.html#fnpcell.interfaces.IRay">IRay</a></li>
+<li><a title="fnpcell.interfaces.IPositioned" href="../interfaces.html#fnpcell.interfaces.IPositioned">IPositioned</a></li>
+<li><a title="fnpcell.interfaces.IRunnable" href="../interfaces.html#fnpcell.interfaces.IRunnable">IRunnable</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.cell.port.OwnedPort.assigned_orientation"><code class="name">var <span class="ident">assigned_orientation</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.hidden"><code class="name">var <span class="ident">hidden</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.name"><code class="name">var <span class="ident">name</span> : Optional[str]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.owner"><code class="name">var <span class="ident">owner</span> : <a title="fnpcell.interfaces.ICellRef" href="../interfaces.html#fnpcell.interfaces.ICellRef">ICellRef</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.raw"><code class="name">var <span class="ident">raw</span> : <a title="fnpcell.interfaces.IPort" href="../interfaces.html#fnpcell.interfaces.IPort">IPort</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Static methods</h3>
+<dl>
+<dt id="fnpcell.cell.port.OwnedPort.from_port"><code class="name flex">
+<span>def <span class="ident">from_port</span></span>(<span>port: <a title="fnpcell.interfaces.IPort" href="../interfaces.html#fnpcell.interfaces.IPort">IPort</a>, owner: <a title="fnpcell.interfaces.ICellRef" href="../interfaces.html#fnpcell.interfaces.ICellRef">ICellRef</a>) ‑> <a title="fnpcell.interfaces.IOwnedPort" href="../interfaces.html#fnpcell.interfaces.IOwnedPort">IOwnedPort</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Return OwnedPort.</p></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="fnpcell.cell.port.OwnedPort.annotation"><code class="name">var <span class="ident">annotation</span></code></dt>
+<dd>
+<div class="desc"><p>Return composite.</p></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.orientation"><code class="name">var <span class="ident">orientation</span> : float</code></dt>
+<dd>
+<div class="desc"><p>Return calculated orientation take owner's transform into account.</p></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.position"><code class="name">var <span class="ident">position</span> : Tuple[float, float]</code></dt>
+<dd>
+<div class="desc"><p>Return position.</p></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.shape"><code class="name">var <span class="ident">shape</span> : <a title="fnpcell.interfaces.IShape" href="../interfaces.html#fnpcell.interfaces.IShape">IShape</a></code></dt>
+<dd>
+<div class="desc"><p>Return pin shape.</p></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.waveguide_type"><code class="name">var <span class="ident">waveguide_type</span> : <a title="fnpcell.interfaces.IWaveguideType" href="../interfaces.html#fnpcell.interfaces.IWaveguideType">IWaveguideType</a></code></dt>
+<dd>
+<div class="desc"><p>Return waveguide_type.</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.cell.port.OwnedPort.advanced"><code class="name flex">
+<span>def <span class="ident">advanced</span></span>(<span>self: ~_Self, distance: float) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.interfaces.IOwnedPort" href="../interfaces.html#fnpcell.interfaces.IOwnedPort">IOwnedPort</a></code>.<code><a title="fnpcell.interfaces.IOwnedPort.advanced" href="../interfaces.html#fnpcell.interfaces.IOwnedPort.advanced">advanced</a></code>
+</p>
+<div class="desc inherited"><p>Return an IRay with advanced position through orientation</p></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.c_mirrored"><code class="name flex">
+<span>def <span class="ident">c_mirrored</span></span>(<span>self) ‑> <a title="fnpcell.interfaces.IOwnedTerminal" href="../interfaces.html#fnpcell.interfaces.IOwnedTerminal">IOwnedTerminal</a></span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.interfaces.IOwnedPort" href="../interfaces.html#fnpcell.interfaces.IOwnedPort">IOwnedPort</a></code>.<code><a title="fnpcell.interfaces.IOwnedPort.c_mirrored" href="../interfaces.html#fnpcell.interfaces.IOwnedPort.c_mirrored">c_mirrored</a></code>
+</p>
+<div class="desc inherited"><p>Owner center mirrored.</p></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.flatten"><code class="name flex">
+<span>def <span class="ident">flatten</span></span>(<span>self) ‑> <a title="fnpcell.cell.port.Port" href="#fnpcell.cell.port.Port">Port</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Return port.</p></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.h_mirrored"><code class="name flex">
+<span>def <span class="ident">h_mirrored</span></span>(<span>self) ‑> <a title="fnpcell.interfaces.IOwnedTerminal" href="../interfaces.html#fnpcell.interfaces.IOwnedTerminal">IOwnedTerminal</a></span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.interfaces.IOwnedPort" href="../interfaces.html#fnpcell.interfaces.IOwnedPort">IOwnedPort</a></code>.<code><a title="fnpcell.interfaces.IOwnedPort.h_mirrored" href="../interfaces.html#fnpcell.interfaces.IOwnedPort.h_mirrored">h_mirrored</a></code>
+</p>
+<div class="desc inherited"><p>Owner horizontal mirrored.</p></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.opposite"><code class="name flex">
+<span>def <span class="ident">opposite</span></span>(<span>self: ~_Self) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.interfaces.IOwnedPort" href="../interfaces.html#fnpcell.interfaces.IOwnedPort">IOwnedPort</a></code>.<code><a title="fnpcell.interfaces.IOwnedPort.opposite" href="../interfaces.html#fnpcell.interfaces.IOwnedPort.opposite">opposite</a></code>
+</p>
+<div class="desc inherited"><p>Return an IRay with same position but opposite orientation</p></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.repositioned"><code class="name flex">
+<span>def <span class="ident">repositioned</span></span>(<span>self, *, at: Union[Tuple[float, float], <a title="fnpcell.interfaces.IPositioned" href="../interfaces.html#fnpcell.interfaces.IPositioned">IPositioned</a>, <a title="fnpcell.interfaces.IRay" href="../interfaces.html#fnpcell.interfaces.IRay">IRay</a>]) ‑> <a title="fnpcell.interfaces.IOwnedTerminal" href="../interfaces.html#fnpcell.interfaces.IOwnedTerminal">IOwnedTerminal</a></span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.interfaces.IOwnedPort" href="../interfaces.html#fnpcell.interfaces.IOwnedPort">IOwnedPort</a></code>.<code><a title="fnpcell.interfaces.IOwnedPort.repositioned" href="../interfaces.html#fnpcell.interfaces.IOwnedPort.repositioned">repositioned</a></code>
+</p>
+<div class="desc inherited"><p>Positioned at new point,Owner will translated.</p></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.rotated"><code class="name flex">
+<span>def <span class="ident">rotated</span></span>(<span>self, degrees: Optional[float] = None, radians: Optional[float] = None) ‑> <a title="fnpcell.interfaces.IOwnedTerminal" href="../interfaces.html#fnpcell.interfaces.IOwnedTerminal">IOwnedTerminal</a></span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.interfaces.IOwnedPort" href="../interfaces.html#fnpcell.interfaces.IOwnedPort">IOwnedPort</a></code>.<code><a title="fnpcell.interfaces.IOwnedPort.rotated" href="../interfaces.html#fnpcell.interfaces.IOwnedPort.rotated">rotated</a></code>
+</p>
+<div class="desc inherited"><p>Rotated both degrees and radians.</p></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.v_mirrored"><code class="name flex">
+<span>def <span class="ident">v_mirrored</span></span>(<span>self) ‑> <a title="fnpcell.interfaces.IOwnedTerminal" href="../interfaces.html#fnpcell.interfaces.IOwnedTerminal">IOwnedTerminal</a></span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.interfaces.IOwnedPort" href="../interfaces.html#fnpcell.interfaces.IOwnedPort">IOwnedPort</a></code>.<code><a title="fnpcell.interfaces.IOwnedPort.v_mirrored" href="../interfaces.html#fnpcell.interfaces.IOwnedPort.v_mirrored">v_mirrored</a></code>
+</p>
+<div class="desc inherited"><p>Owner vertical mirrored.</p></div>
+</dd>
+<dt id="fnpcell.cell.port.OwnedPort.with_orientation"><code class="name flex">
+<span>def <span class="ident">with_orientation</span></span>(<span>self, *, degrees: Optional[float] = None, radians: Optional[float] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Return a new OwnedPort with the given orientation.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.cell.port.Port"><code class="flex name class">
+<span>class <span class="ident">Port</span></span>
+<span>(</span><span>name: Optional[str], position: Tuple[float, float], orientation: float, waveguide_type: <a title="fnpcell.interfaces.IWaveguideType" href="../interfaces.html#fnpcell.interfaces.IWaveguideType">IWaveguideType</a>, shape: <a title="fnpcell.interfaces.IShape" href="../interfaces.html#fnpcell.interfaces.IShape">IShape</a>, hidden: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Port is for defining a optical Port .</p>
+<p>Any modification will create new Port instead of modify the original Port.
+Orientation in radians.</p>
+<p>Usage:</p>
+<pre><code class="language-python">from fnpcell import all as fp
+
+port = fp.Port(name=&quot;op_0&quot;, position=(0, 0),...)
+</code></pre></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.cell.port._PortMixin</li>
+<li><a title="fnpcell.interfaces.IPort" href="../interfaces.html#fnpcell.interfaces.IPort">IPort</a></li>
+<li><a title="fnpcell.interfaces.ITerminal" href="../interfaces.html#fnpcell.interfaces.ITerminal">ITerminal</a></li>
+<li><a title="fnpcell.interfaces.IUpdatable" href="../interfaces.html#fnpcell.interfaces.IUpdatable">IUpdatable</a></li>
+<li><a title="fnpcell.interfaces.IRay" href="../interfaces.html#fnpcell.interfaces.IRay">IRay</a></li>
+<li><a title="fnpcell.interfaces.IPositioned" href="../interfaces.html#fnpcell.interfaces.IPositioned">IPositioned</a></li>
+<li><a title="fnpcell.interfaces.IRunnable" href="../interfaces.html#fnpcell.interfaces.IRunnable">IRunnable</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.cell.port.Port.hidden"><code class="name">var <span class="ident">hidden</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.cell.port.Port.name"><code class="name">var <span class="ident">name</span> : Optional[str]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.cell.port.Port.orientation"><code class="name">var <span class="ident">orientation</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.cell.port.Port.position"><code class="name">var <span class="ident">position</span> : Tuple[float, float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.cell.port.Port.shape"><code class="name">var <span class="ident">shape</span> : <a title="fnpcell.interfaces.IShape" href="../interfaces.html#fnpcell.interfaces.IShape">IShape</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.cell.port.Port.waveguide_type"><code class="name">var <span class="ident">waveguide_type</span> : <a title="fnpcell.interfaces.IWaveguideType" href="../interfaces.html#fnpcell.interfaces.IWaveguideType">IWaveguideType</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="fnpcell.cell.port.Port.annotation"><code class="name">var <span class="ident">annotation</span></code></dt>
+<dd>
+<div class="desc"><p>Return port composite on the basis of waveguide_type.</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.cell.port.Port.advanced"><code class="name flex">
+<span>def <span class="ident">advanced</span></span>(<span>self: ~_Self, distance: float) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.interfaces.IPort" href="../interfaces.html#fnpcell.interfaces.IPort">IPort</a></code>.<code><a title="fnpcell.interfaces.IPort.advanced" href="../interfaces.html#fnpcell.interfaces.IPort.advanced">advanced</a></code>
+</p>
+<div class="desc inherited"><p>Return an IRay with advanced position through orientation</p></div>
+</dd>
+<dt id="fnpcell.cell.port.Port.opposite"><code class="name flex">
+<span>def <span class="ident">opposite</span></span>(<span>self: ~_Self) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.interfaces.IPort" href="../interfaces.html#fnpcell.interfaces.IPort">IPort</a></code>.<code><a title="fnpcell.interfaces.IPort.opposite" href="../interfaces.html#fnpcell.interfaces.IPort.opposite">opposite</a></code>
+</p>
+<div class="desc inherited"><p>Return an IRay with same position but opposite orientation</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="../assets/tingle/0.15.3/tingle.min.css">
+<script src="../assets/tingle/0.15.3/tingle.min.js"></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = '../doc-search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="fnpcell.cell" href="index.html">fnpcell.cell</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="fnpcell.cell.port.new_port" href="#fnpcell.cell.port.new_port">new_port</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="fnpcell.cell.port.OwnedPort" href="#fnpcell.cell.port.OwnedPort">OwnedPort</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.cell.port.OwnedPort.advanced" href="../interfaces.html#fnpcell.cell.port.OwnedPort.advanced">advanced</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.annotation" href="#fnpcell.cell.port.OwnedPort.annotation">annotation</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.assigned_orientation" href="#fnpcell.cell.port.OwnedPort.assigned_orientation">assigned_orientation</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.c_mirrored" href="../interfaces.html#fnpcell.cell.port.OwnedPort.c_mirrored">c_mirrored</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.flatten" href="#fnpcell.cell.port.OwnedPort.flatten">flatten</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.from_port" href="#fnpcell.cell.port.OwnedPort.from_port">from_port</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.h_mirrored" href="../interfaces.html#fnpcell.cell.port.OwnedPort.h_mirrored">h_mirrored</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.hidden" href="#fnpcell.cell.port.OwnedPort.hidden">hidden</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.name" href="#fnpcell.cell.port.OwnedPort.name">name</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.opposite" href="../interfaces.html#fnpcell.cell.port.OwnedPort.opposite">opposite</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.orientation" href="#fnpcell.cell.port.OwnedPort.orientation">orientation</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.owner" href="#fnpcell.cell.port.OwnedPort.owner">owner</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.position" href="#fnpcell.cell.port.OwnedPort.position">position</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.raw" href="#fnpcell.cell.port.OwnedPort.raw">raw</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.repositioned" href="../interfaces.html#fnpcell.cell.port.OwnedPort.repositioned">repositioned</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.rotated" href="../interfaces.html#fnpcell.cell.port.OwnedPort.rotated">rotated</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.shape" href="#fnpcell.cell.port.OwnedPort.shape">shape</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.v_mirrored" href="../interfaces.html#fnpcell.cell.port.OwnedPort.v_mirrored">v_mirrored</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.waveguide_type" href="#fnpcell.cell.port.OwnedPort.waveguide_type">waveguide_type</a></code></li>
+<li><code><a title="fnpcell.cell.port.OwnedPort.with_orientation" href="#fnpcell.cell.port.OwnedPort.with_orientation">with_orientation</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.cell.port.Port" href="#fnpcell.cell.port.Port">Port</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.cell.port.Port.advanced" href="../interfaces.html#fnpcell.cell.port.Port.advanced">advanced</a></code></li>
+<li><code><a title="fnpcell.cell.port.Port.annotation" href="#fnpcell.cell.port.Port.annotation">annotation</a></code></li>
+<li><code><a title="fnpcell.cell.port.Port.hidden" href="#fnpcell.cell.port.Port.hidden">hidden</a></code></li>
+<li><code><a title="fnpcell.cell.port.Port.name" href="#fnpcell.cell.port.Port.name">name</a></code></li>
+<li><code><a title="fnpcell.cell.port.Port.opposite" href="../interfaces.html#fnpcell.cell.port.Port.opposite">opposite</a></code></li>
+<li><code><a title="fnpcell.cell.port.Port.orientation" href="#fnpcell.cell.port.Port.orientation">orientation</a></code></li>
+<li><code><a title="fnpcell.cell.port.Port.position" href="#fnpcell.cell.port.Port.position">position</a></code></li>
+<li><code><a title="fnpcell.cell.port.Port.shape" href="#fnpcell.cell.port.Port.shape">shape</a></code></li>
+<li><code><a title="fnpcell.cell.port.Port.waveguide_type" href="#fnpcell.cell.port.Port.waveguide_type">waveguide_type</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>

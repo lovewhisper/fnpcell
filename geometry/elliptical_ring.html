@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>fnpcell.geometry.elliptical_ring API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="../assets/10up-sanitize.css/11.0.1/sanitize.min.css">
+<link rel="preload stylesheet" as="style" href="../assets/10up-sanitize.css/11.0.1/typography.min.css">
+<link rel="stylesheet preload" as="style" href="../assets/highlight.js/10.1.1/styles/github-dark.min.css">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="../assets/highlight.js/10.1.1/highlight.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>fnpcell.geometry.elliptical_ring</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="fnpcell.geometry.elliptical_ring.new_elliptical_ring"><code class="name flex">
+<span>def <span class="ident">new_elliptical_ring</span></span>(<span>*, outer_radius: Union[float, Iterable[float]], inner_radius: Union[float, Iterable[float]] = (0, 0), initial_radians: Union[None, float, Iterable[float]] = None, initial_degrees: Union[None, float, Iterable[float]] = None, final_radians: Union[None, float, Iterable[float]] = None, final_degrees: Union[None, float, Iterable[float]] = None, origin: Optional[Tuple[float, float]] = None, transform: <a title="fnpcell.transform.Affine2D" href="../transform.html#fnpcell.transform.Affine2D">Affine2D</a> = Affine2D.identity()) ‑> <a title="fnpcell.geometry.elliptical_ring.EllipticalRing" href="#fnpcell.geometry.elliptical_ring.EllipticalRing">EllipticalRing</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create a EllipticalRing.</p></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing"><code class="flex name class">
+<span>class <span class="ident">EllipticalRing</span></span>
+<span>(</span><span>outer_radius: Tuple[float, float], inner_radius: Tuple[float, float], initial_angle: Tuple[float, float], final_angle: Tuple[float, float], transform: <a title="fnpcell.transform.Affine2D" href="../transform.html#fnpcell.transform.Affine2D">Affine2D</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>EllipticalRing(<em>args: Any, </em>*kwargs: Any)</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.geometry.shape.Shape" href="shape.html#fnpcell.geometry.shape.Shape">Shape</a></li>
+<li><a title="fnpcell.mixin.transform_mixin.TransformMixin" href="../mixin/transform_mixin.html#fnpcell.mixin.transform_mixin.TransformMixin">TransformMixin</a></li>
+<li><a title="fnpcell.interfaces.IUpdatable" href="../interfaces.html#fnpcell.interfaces.IUpdatable">IUpdatable</a></li>
+<li><a title="fnpcell.interfaces.IShape" href="../interfaces.html#fnpcell.interfaces.IShape">IShape</a></li>
+<li><a title="fnpcell.interfaces.IAffineTransformable" href="../interfaces.html#fnpcell.interfaces.IAffineTransformable">IAffineTransformable</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing.final_angle"><code class="name">var <span class="ident">final_angle</span> : Tuple[float, float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing.initial_angle"><code class="name">var <span class="ident">initial_angle</span> : Tuple[float, float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing.inner_radius"><code class="name">var <span class="ident">inner_radius</span> : Tuple[float, float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing.outer_radius"><code class="name">var <span class="ident">outer_radius</span> : Tuple[float, float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing.transform"><code class="name">var <span class="ident">transform</span> : <a title="fnpcell.transform.Affine2D" href="../transform.html#fnpcell.transform.Affine2D">Affine2D</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing.raw_shape_points"><code class="name">var <span class="ident">raw_shape_points</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing.c_mirrored"><code class="name flex">
+<span>def <span class="ident">c_mirrored</span></span>(<span>self: ~_Self, *, center: Tuple[float, float] = (0, 0)) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.geometry.shape.Shape" href="shape.html#fnpcell.geometry.shape.Shape">Shape</a></code>.<code><a title="fnpcell.geometry.shape.Shape.c_mirrored" href="../interfaces.html#fnpcell.geometry.shape.Shape.c_mirrored">c_mirrored</a></code>
+</p>
+<div class="desc inherited"><p>Center mirrored.</p></div>
+</dd>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing.h_mirrored"><code class="name flex">
+<span>def <span class="ident">h_mirrored</span></span>(<span>self: ~_Self, *, x: float = 0) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.geometry.shape.Shape" href="shape.html#fnpcell.geometry.shape.Shape">Shape</a></code>.<code><a title="fnpcell.geometry.shape.Shape.h_mirrored" href="../interfaces.html#fnpcell.geometry.shape.Shape.h_mirrored">h_mirrored</a></code>
+</p>
+<div class="desc inherited"><p>Horizontal mirrored</p></div>
+</dd>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing.offsetted"><code class="name flex">
+<span>def <span class="ident">offsetted</span></span>(<span>self, offset: float) ‑> <a title="fnpcell.interfaces.IShape" href="../interfaces.html#fnpcell.interfaces.IShape">IShape</a></span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.geometry.shape.Shape" href="shape.html#fnpcell.geometry.shape.Shape">Shape</a></code>.<code><a title="fnpcell.geometry.shape.Shape.offsetted" href="shape.html#fnpcell.geometry.shape.Shape.offsetted">offsetted</a></code>
+</p>
+<div class="desc inherited"><h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>offset</code></strong></dt>
+<dd>float, offset towards left if positive, towards right if negative …</dd>
+</dl></div>
+</dd>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing.rotated"><code class="name flex">
+<span>def <span class="ident">rotated</span></span>(<span>self: ~_Self, *, degrees: Optional[float] = None, radians: Optional[float] = None, origin: Optional[Tuple[float, float]] = None, inplace: Optional[bool] = None) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.geometry.shape.Shape" href="shape.html#fnpcell.geometry.shape.Shape">Shape</a></code>.<code><a title="fnpcell.geometry.shape.Shape.rotated" href="../interfaces.html#fnpcell.geometry.shape.Shape.rotated">rotated</a></code>
+</p>
+<div class="desc inherited"><p>Return a new cell reference rotated, either degrees or radians must be provided.
+If both provided, radians is used …</p></div>
+</dd>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing.scaled"><code class="name flex">
+<span>def <span class="ident">scaled</span></span>(<span>self: ~_Self, sx: float, sy: Optional[float] = None, *, center: Tuple[float, float] = (0, 0)) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.geometry.shape.Shape" href="shape.html#fnpcell.geometry.shape.Shape">Shape</a></code>.<code><a title="fnpcell.geometry.shape.Shape.scaled" href="../interfaces.html#fnpcell.geometry.shape.Shape.scaled">scaled</a></code>
+</p>
+<div class="desc inherited"><p>scaled at center.</p></div>
+</dd>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing.translated"><code class="name flex">
+<span>def <span class="ident">translated</span></span>(<span>self: ~_Self, tx: float, ty: float) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.geometry.shape.Shape" href="shape.html#fnpcell.geometry.shape.Shape">Shape</a></code>.<code><a title="fnpcell.geometry.shape.Shape.translated" href="../interfaces.html#fnpcell.geometry.shape.Shape.translated">translated</a></code>
+</p>
+<div class="desc inherited"><p>Translated.</p></div>
+</dd>
+<dt id="fnpcell.geometry.elliptical_ring.EllipticalRing.v_mirrored"><code class="name flex">
+<span>def <span class="ident">v_mirrored</span></span>(<span>self: ~_Self, *, y: float = 0) ‑> ~_Self</span>
+</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.geometry.shape.Shape" href="shape.html#fnpcell.geometry.shape.Shape">Shape</a></code>.<code><a title="fnpcell.geometry.shape.Shape.v_mirrored" href="../interfaces.html#fnpcell.geometry.shape.Shape.v_mirrored">v_mirrored</a></code>
+</p>
+<div class="desc inherited"><p>Vertical mirrored.</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="../assets/tingle/0.15.3/tingle.min.css">
+<script src="../assets/tingle/0.15.3/tingle.min.js"></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = '../doc-search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="fnpcell.geometry" href="index.html">fnpcell.geometry</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="fnpcell.geometry.elliptical_ring.new_elliptical_ring" href="#fnpcell.geometry.elliptical_ring.new_elliptical_ring">new_elliptical_ring</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing" href="#fnpcell.geometry.elliptical_ring.EllipticalRing">EllipticalRing</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing.c_mirrored" href="../interfaces.html#fnpcell.geometry.elliptical_ring.EllipticalRing.c_mirrored">c_mirrored</a></code></li>
+<li><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing.final_angle" href="#fnpcell.geometry.elliptical_ring.EllipticalRing.final_angle">final_angle</a></code></li>
+<li><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing.h_mirrored" href="../interfaces.html#fnpcell.geometry.elliptical_ring.EllipticalRing.h_mirrored">h_mirrored</a></code></li>
+<li><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing.initial_angle" href="#fnpcell.geometry.elliptical_ring.EllipticalRing.initial_angle">initial_angle</a></code></li>
+<li><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing.inner_radius" href="#fnpcell.geometry.elliptical_ring.EllipticalRing.inner_radius">inner_radius</a></code></li>
+<li><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing.offsetted" href="shape.html#fnpcell.geometry.elliptical_ring.EllipticalRing.offsetted">offsetted</a></code></li>
+<li><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing.outer_radius" href="#fnpcell.geometry.elliptical_ring.EllipticalRing.outer_radius">outer_radius</a></code></li>
+<li><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing.raw_shape_points" href="#fnpcell.geometry.elliptical_ring.EllipticalRing.raw_shape_points">raw_shape_points</a></code></li>
+<li><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing.rotated" href="../interfaces.html#fnpcell.geometry.elliptical_ring.EllipticalRing.rotated">rotated</a></code></li>
+<li><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing.scaled" href="../interfaces.html#fnpcell.geometry.elliptical_ring.EllipticalRing.scaled">scaled</a></code></li>
+<li><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing.transform" href="#fnpcell.geometry.elliptical_ring.EllipticalRing.transform">transform</a></code></li>
+<li><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing.translated" href="../interfaces.html#fnpcell.geometry.elliptical_ring.EllipticalRing.translated">translated</a></code></li>
+<li><code><a title="fnpcell.geometry.elliptical_ring.EllipticalRing.v_mirrored" href="../interfaces.html#fnpcell.geometry.elliptical_ring.EllipticalRing.v_mirrored">v_mirrored</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>

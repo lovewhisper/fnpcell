@@ -1,0 +1,1439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>fnpcell.pdk.pcell_params API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="../assets/10up-sanitize.css/11.0.1/sanitize.min.css">
+<link rel="preload stylesheet" as="style" href="../assets/10up-sanitize.css/11.0.1/typography.min.css">
+<link rel="stylesheet preload" as="style" href="../assets/highlight.js/10.1.1/styles/github-dark.min.css">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="../assets/highlight.js/10.1.1/highlight.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>fnpcell.pdk.pcell_params</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.AnchorParam"><code class="flex name class">
+<span>class <span class="ident">AnchorParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = fnpcell.interfaces.Anchor, required: bool = True, default: Optional[<a title="fnpcell.interfaces.Anchor" href="../interfaces.html#fnpcell.interfaces.Anchor">Anchor</a>] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Anchor.</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.AnchorParam.default"><code class="name">var <span class="ident">default</span> : Optional[<a title="fnpcell.interfaces.Anchor" href="../interfaces.html#fnpcell.interfaces.Anchor">Anchor</a>]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.AnchorParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"><p>Assign where the (0, 0) is.</p>
+<h2 id="usage">Usage</h2>
+<p>from fnpcell import all as fp
+Straight(name="", anchor=fp.Anchor.CENTER, &hellip;)</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.BooleanParam"><code class="flex name class">
+<span>class <span class="ident">BooleanParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = builtins.bool, required: bool = True, default: Optional[bool] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for boolean</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.BooleanParam.default"><code class="name">var <span class="ident">default</span> : Optional[bool]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.BooleanParam.doc"><code class="name">var <span class="ident">doc</span> : Optional[str]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.BooleanParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"><p>bool(x) -&gt; bool</p>
+<p>Returns True when the argument x is true, False otherwise.
+The builtins True and False are the only two instances of the class bool.
+The class bool is a subclass of the class int, and cannot be subclassed.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.DegreeParam"><code class="flex name class">
+<span>class <span class="ident">DegreeParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = (&lt;class &#x27;float&#x27;&gt;, &lt;class &#x27;int&#x27;&gt;), required: bool = True, default: Optional[float] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, min: Optional[float] = None, max: Optional[float] = None, invalid: Optional[Container[float]] = None, precision: Optional[float] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Angle in Degrees</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.FloatParam" href="#fnpcell.pdk.pcell_params.FloatParam">FloatParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.DegreeParam.default"><code class="name">var <span class="ident">default</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.DegreeParam.invalid"><code class="name">var <span class="ident">invalid</span> : Optional[Container[float]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.DegreeParam.max"><code class="name">var <span class="ident">max</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.DegreeParam.min"><code class="name">var <span class="ident">min</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.DeviceParam"><code class="flex name class">
+<span>class <span class="ident">DeviceParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = fnpcell.interfaces.ICellRef, required: bool = True, default: Optional[<a title="fnpcell.interfaces.ICellRef" href="../interfaces.html#fnpcell.interfaces.ICellRef">ICellRef</a>] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, factory: Optional[Callable[..., <a title="fnpcell.interfaces.ICellRef" href="../interfaces.html#fnpcell.interfaces.ICellRef">ICellRef</a>]] = None, port_count: Optional[int] = None, pin_count: Optional[int] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Device</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.DeviceParam.default"><code class="name">var <span class="ident">default</span> : Optional[<a title="fnpcell.interfaces.ICellRef" href="../interfaces.html#fnpcell.interfaces.ICellRef">ICellRef</a>]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.DeviceParam.factory"><code class="name">var <span class="ident">factory</span> : Optional[Callable[..., <a title="fnpcell.interfaces.ICellRef" href="../interfaces.html#fnpcell.interfaces.ICellRef">ICellRef</a>]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.DeviceParam.pin_count"><code class="name">var <span class="ident">pin_count</span> : Optional[int]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.DeviceParam.port_count"><code class="name">var <span class="ident">port_count</span> : Optional[int]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.DeviceParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"><p>Interface of CellRef</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.DeviceParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.FloatParam"><code class="flex name class">
+<span>class <span class="ident">FloatParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = (&lt;class &#x27;float&#x27;&gt;, &lt;class &#x27;int&#x27;&gt;), required: bool = True, default: Optional[float] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, min: Optional[float] = None, max: Optional[float] = None, invalid: Optional[Container[float]] = None, precision: Optional[float] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Float</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.DegreeParam" href="#fnpcell.pdk.pcell_params.DegreeParam">DegreeParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IntParam" href="#fnpcell.pdk.pcell_params.IntParam">IntParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.NonNegFloatParam" href="#fnpcell.pdk.pcell_params.NonNegFloatParam">NonNegFloatParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.PositiveFloatParam" href="#fnpcell.pdk.pcell_params.PositiveFloatParam">PositiveFloatParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.FloatParam.default"><code class="name">var <span class="ident">default</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.FloatParam.invalid"><code class="name">var <span class="ident">invalid</span> : Optional[Container[float]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.FloatParam.max"><code class="name">var <span class="ident">max</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.FloatParam.min"><code class="name">var <span class="ident">min</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.FloatParam.precision"><code class="name">var <span class="ident">precision</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.FloatParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.FloatParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.IParam"><code class="flex name class">
+<span>class <span class="ident">IParam</span></span>
+</code></dt>
+<dd>
+<div class="desc"><h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>type</code></strong></dt>
+<dd>Optional, parameter value must be instance of <code>type</code> if provided</dd>
+<dt><strong><code>required</code></strong></dt>
+<dd>True, parameter value must not be None, if <code>required</code> is True</dd>
+<dt><strong><code>default</code></strong></dt>
+<dd>Optional, default value if parameter is not provided</dd>
+<dt><strong><code>default_factory</code></strong></dt>
+<dd>
+<p>str or Callable, defaults to "_default_{name}"</p>
+<p>If <code>default_factory</code> is Callable, then it will be called during parameter resolution.</p>
+<p>If <code>default_factory</code> is str, then:</p>
+<ul>
+<li>In functional pcell, it will be ignored.</li>
+<li>In dataclass pcell, <code>default_factory</code> will be formated with parameter name, and if a method of pcell has that name, it will be called
+and the return value is used as default value.</li>
+</ul>
+<p>If both <code>default</code> and <code>default_factory</code> is provided, then:</p>
+<ul>
+<li>In functional pcell, <code>default_factory</code> is called first, if it returns None, then <code>default</code> is used.</li>
+<li>In dataclass pcell, <code>default</code> is used as initial value, then <code>default_factory</code> is called to get the frozen value.
+If it returns None, then <code>default</code> is used.</li>
+</ul>
+</dd>
+<dt><strong><code>preprocessor</code></strong></dt>
+<dd>
+<p>Optional, will be called on user-provided parameter value before default value resolution and validation.</p>
+<p>User may provide None as parameter value, and <code>preprocessor</code> should handle that.</p>
+<p>If <code>preprocessor</code> returns None, the parameter is treated as not provided by user and will run default value resolution.</p>
+</dd>
+<dt><strong><code>doc</code></strong></dt>
+<dd>Optional, user provided short document text.</dd>
+</dl></div>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li>fnpcell.pdk.pcell_params._NonNegMixin</li>
+<li>fnpcell.pdk.pcell_params._PositiveMixin</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.IParam.default"><code class="name">var <span class="ident">default</span> : Optional[Any]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.IParam.default_factory"><code class="name">var <span class="ident">default_factory</span> : Union[str, Callable[[], Any]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.IParam.doc"><code class="name">var <span class="ident">doc</span> : Optional[str]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.IParam.frozen"><code class="name">var <span class="ident">frozen</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.IParam.preprocessor"><code class="name">var <span class="ident">preprocessor</span> : Optional[Callable[[Any], Any]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.IParam.required"><code class="name">var <span class="ident">required</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.IParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.IParam.as_field"><code class="name flex">
+<span>def <span class="ident">as_field</span></span>(<span>self, repr: bool = True, hash: Optional[bool] = None, compare: bool = True) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.IParam.resolve"><code class="name flex">
+<span>def <span class="ident">resolve</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.IParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.IntParam"><code class="flex name class">
+<span>class <span class="ident">IntParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = (&lt;class &#x27;float&#x27;&gt;, &lt;class &#x27;int&#x27;&gt;), required: bool = True, default: Optional[int] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, min: Optional[int] = None, max: Optional[int] = None, invalid: Optional[Container[int]] = None, precision: Optional[float] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Integer</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.FloatParam" href="#fnpcell.pdk.pcell_params.FloatParam">FloatParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.NonNegIntParam" href="#fnpcell.pdk.pcell_params.NonNegIntParam">NonNegIntParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.PositiveIntParam" href="#fnpcell.pdk.pcell_params.PositiveIntParam">PositiveIntParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.IntParam.default"><code class="name">var <span class="ident">default</span> : Optional[int]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.IntParam.invalid"><code class="name">var <span class="ident">invalid</span> : Optional[Container[int]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.IntParam.max"><code class="name">var <span class="ident">max</span> : Optional[int]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.IntParam.min"><code class="name">var <span class="ident">min</span> : Optional[int]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.IntParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.LayerParam"><code class="flex name class">
+<span>class <span class="ident">LayerParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = fnpcell.interfaces.ILayer, required: bool = True, default: Optional[<a title="fnpcell.interfaces.ILayer" href="../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a>] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Layer</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.LayerParam.default"><code class="name">var <span class="ident">default</span> : Optional[<a title="fnpcell.interfaces.ILayer" href="../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a>]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.LayerParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"><p>Interface of Layer.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.ListParam"><code class="flex name class">
+<span>class <span class="ident">ListParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = typing.Iterable, required: bool = True, default: Optional[Iterable[Any]] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, element_type: Optional[Type[Any]] = None, immutable: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for List</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.ListParam.default"><code class="name">var <span class="ident">default</span> : Optional[Iterable[Any]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.ListParam.element_type"><code class="name">var <span class="ident">element_type</span> : Optional[Type[Any]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.ListParam.immutable"><code class="name">var <span class="ident">immutable</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.ListParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.ListParam.resolve"><code class="name flex">
+<span>def <span class="ident">resolve</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.ListParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.MappingParam"><code class="flex name class">
+<span>class <span class="ident">MappingParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = typing.Mapping, required: bool = True, default: Optional[Dict[Any, Any]] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, K: Optional[Type[Any]] = None, V: Optional[Type[Any]] = None, immutable: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Mapping</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.MappingParam.K"><code class="name">var <span class="ident">K</span> : Optional[Type[Any]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.MappingParam.V"><code class="name">var <span class="ident">V</span> : Optional[Type[Any]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.MappingParam.default"><code class="name">var <span class="ident">default</span> : Optional[Dict[Any, Any]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.MappingParam.immutable"><code class="name">var <span class="ident">immutable</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.MappingParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.MappingParam.resolve"><code class="name flex">
+<span>def <span class="ident">resolve</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.MappingParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.MetalLineTypeParam"><code class="flex name class">
+<span>class <span class="ident">MetalLineTypeParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = fnpcell.interfaces.IMetalLineType, required: bool = True, default: Optional[Any] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, band: Union[<a title="fnpcell.interfaces.IBand" href="../interfaces.html#fnpcell.interfaces.IBand">IBand</a>, Container[<a title="fnpcell.interfaces.IBand" href="../interfaces.html#fnpcell.interfaces.IBand">IBand</a>], None] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for MetalLineType</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.MetalLineTypeParam.band"><code class="name">var <span class="ident">band</span> : Union[<a title="fnpcell.interfaces.IBand" href="../interfaces.html#fnpcell.interfaces.IBand">IBand</a>, Container[<a title="fnpcell.interfaces.IBand" href="../interfaces.html#fnpcell.interfaces.IBand">IBand</a>], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.MetalLineTypeParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.MetalLineTypeParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NameListParam"><code class="flex name class">
+<span>class <span class="ident">NameListParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = typing.Iterable, required: bool = True, default: Optional[Sequence[str]] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, min_count: int = 0, max_count: int = 9223372036854775807, count: Optional[int] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Name List, eg. ["op_0", "op_1", "op_2", "op_3"]</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.NameListParam.count"><code class="name">var <span class="ident">count</span> : Optional[int]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NameListParam.default"><code class="name">var <span class="ident">default</span> : Optional[Sequence[str]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NameListParam.max_count"><code class="name">var <span class="ident">max_count</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NameListParam.min_count"><code class="name">var <span class="ident">min_count</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NameListParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.NameListParam.resolve"><code class="name flex">
+<span>def <span class="ident">resolve</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NameListParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NameParam"><code class="flex name class">
+<span>class <span class="ident">NameParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = builtins.str, required: bool = False, default: Optional[str] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, prefix: Optional[str] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for PCell Name</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.TextParam" href="#fnpcell.pdk.pcell_params.TextParam">TextParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.NameParam.default"><code class="name">var <span class="ident">default</span> : Optional[str]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NameParam.prefix"><code class="name">var <span class="ident">prefix</span> : Optional[str]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NameParam.required"><code class="name">var <span class="ident">required</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NameParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<p class="inheritance">
+<em>Inherited from:</em>
+<code><a title="fnpcell.pdk.pcell_params.TextParam" href="#fnpcell.pdk.pcell_params.TextParam">TextParam</a></code>.<code><a title="fnpcell.pdk.pcell_params.TextParam.type" href="#fnpcell.pdk.pcell_params.TextParam.type">type</a></code>
+</p>
+<div class="desc inherited"><p>str(object='') -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str …</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.NameParam.resolve"><code class="name flex">
+<span>def <span class="ident">resolve</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NameParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NonNegFloatParam"><code class="flex name class">
+<span>class <span class="ident">NonNegFloatParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = (&lt;class &#x27;float&#x27;&gt;, &lt;class &#x27;int&#x27;&gt;), required: bool = True, default: Optional[float] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, min: float = 0, max: Optional[float] = None, invalid: Optional[Container[float]] = None, precision: Optional[float] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for non negative Float</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.FloatParam" href="#fnpcell.pdk.pcell_params.FloatParam">FloatParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li>fnpcell.pdk.pcell_params._NonNegMixin</li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.NonNegFloatParam.default"><code class="name">var <span class="ident">default</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NonNegFloatParam.invalid"><code class="name">var <span class="ident">invalid</span> : Optional[Container[float]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NonNegFloatParam.max"><code class="name">var <span class="ident">max</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NonNegFloatParam.min"><code class="name">var <span class="ident">min</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NonNegIntParam"><code class="flex name class">
+<span>class <span class="ident">NonNegIntParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = (&lt;class &#x27;float&#x27;&gt;, &lt;class &#x27;int&#x27;&gt;), required: bool = True, default: Optional[int] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, min: int = 0, max: Optional[int] = None, invalid: Optional[Container[int]] = None, precision: Optional[float] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for non negative Float</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.IntParam" href="#fnpcell.pdk.pcell_params.IntParam">IntParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.FloatParam" href="#fnpcell.pdk.pcell_params.FloatParam">FloatParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li>fnpcell.pdk.pcell_params._NonNegMixin</li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.NonNegIntParam.default"><code class="name">var <span class="ident">default</span> : Optional[int]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NonNegIntParam.invalid"><code class="name">var <span class="ident">invalid</span> : Optional[Container[int]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NonNegIntParam.max"><code class="name">var <span class="ident">max</span> : Optional[int]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.NonNegIntParam.min"><code class="name">var <span class="ident">min</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.Param"><code class="flex name class">
+<span>class <span class="ident">Param</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = None, required: bool = True, default: Optional[Any] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>General parameter definition</p>
+<p>If there's no proper XXXParam, then use <code><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></code>.</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.AnchorParam" href="#fnpcell.pdk.pcell_params.AnchorParam">AnchorParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.BooleanParam" href="#fnpcell.pdk.pcell_params.BooleanParam">BooleanParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.DeviceParam" href="#fnpcell.pdk.pcell_params.DeviceParam">DeviceParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.FloatParam" href="#fnpcell.pdk.pcell_params.FloatParam">FloatParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.LayerParam" href="#fnpcell.pdk.pcell_params.LayerParam">LayerParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.ListParam" href="#fnpcell.pdk.pcell_params.ListParam">ListParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.MappingParam" href="#fnpcell.pdk.pcell_params.MappingParam">MappingParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.MetalLineTypeParam" href="#fnpcell.pdk.pcell_params.MetalLineTypeParam">MetalLineTypeParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.NameListParam" href="#fnpcell.pdk.pcell_params.NameListParam">NameListParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.PointsParam" href="#fnpcell.pdk.pcell_params.PointsParam">PointsParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.PortOptionsParam" href="#fnpcell.pdk.pcell_params.PortOptionsParam">PortOptionsParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.PositionParam" href="#fnpcell.pdk.pcell_params.PositionParam">PositionParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.SetParam" href="#fnpcell.pdk.pcell_params.SetParam">SetParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.TextParam" href="#fnpcell.pdk.pcell_params.TextParam">TextParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.TransformParam" href="#fnpcell.pdk.pcell_params.TransformParam">TransformParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.WaveguideTypeParam" href="#fnpcell.pdk.pcell_params.WaveguideTypeParam">WaveguideTypeParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.Param.default"><code class="name">var <span class="ident">default</span> : Optional[Any]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.Param.default_factory"><code class="name">var <span class="ident">default_factory</span> : Union[str, Callable[[], Any]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.Param.doc"><code class="name">var <span class="ident">doc</span> : Optional[str]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.Param.frozen"><code class="name">var <span class="ident">frozen</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.Param.preprocessor"><code class="name">var <span class="ident">preprocessor</span> : Optional[Callable[[Any], Any]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.Param.required"><code class="name">var <span class="ident">required</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.Param.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PointsParam"><code class="flex name class">
+<span>class <span class="ident">PointsParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = typing.Iterable, required: bool = True, default: Optional[Iterable[Tuple[float, float]]] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, min_count: int = 0)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Point</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.PointsParam.default"><code class="name">var <span class="ident">default</span> : Optional[Iterable[Tuple[float, float]]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PointsParam.min_count"><code class="name">var <span class="ident">min_count</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PointsParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.PointsParam.resolve"><code class="name flex">
+<span>def <span class="ident">resolve</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PointsParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PortOptionsParam"><code class="flex name class">
+<span>class <span class="ident">PortOptionsParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = typing.Sequence, required: bool = True, default: Optional[Sequence[Union[None, str, <a title="fnpcell.interfaces.Hidden" href="../interfaces.html#fnpcell.interfaces.Hidden">Hidden</a>]]] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, count: Optional[int] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for PortOptions, eg: ports=(None, "op_1")
+None will disable port in the position</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.PortOptionsParam.count"><code class="name">var <span class="ident">count</span> : Optional[int]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PortOptionsParam.default"><code class="name">var <span class="ident">default</span> : Optional[Sequence[Union[None, str, <a title="fnpcell.interfaces.Hidden" href="../interfaces.html#fnpcell.interfaces.Hidden">Hidden</a>]]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PortOptionsParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.PortOptionsParam.resolve"><code class="name flex">
+<span>def <span class="ident">resolve</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PortOptionsParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PositionParam"><code class="flex name class">
+<span>class <span class="ident">PositionParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = typing.Tuple, required: bool = True, default: Optional[Tuple[float, float]] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Position</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.PositionParam.default"><code class="name">var <span class="ident">default</span> : Optional[Tuple[float, float]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PositionParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.PositionParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PositiveFloatParam"><code class="flex name class">
+<span>class <span class="ident">PositiveFloatParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = (&lt;class &#x27;float&#x27;&gt;, &lt;class &#x27;int&#x27;&gt;), required: bool = True, default: Optional[float] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, min: Optional[float] = None, max: Optional[float] = None, invalid: Optional[Container[float]] = None, precision: Optional[float] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Positive Float</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.FloatParam" href="#fnpcell.pdk.pcell_params.FloatParam">FloatParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li>fnpcell.pdk.pcell_params._PositiveMixin</li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.PositiveFloatParam.default"><code class="name">var <span class="ident">default</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PositiveFloatParam.invalid"><code class="name">var <span class="ident">invalid</span> : Optional[Container[float]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PositiveFloatParam.max"><code class="name">var <span class="ident">max</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PositiveFloatParam.min"><code class="name">var <span class="ident">min</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PositiveIntParam"><code class="flex name class">
+<span>class <span class="ident">PositiveIntParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = (&lt;class &#x27;float&#x27;&gt;, &lt;class &#x27;int&#x27;&gt;), required: bool = True, default: Optional[int] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, min: Optional[int] = None, max: Optional[int] = None, invalid: Optional[Container[int]] = None, precision: Optional[float] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Positive Float</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.IntParam" href="#fnpcell.pdk.pcell_params.IntParam">IntParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.FloatParam" href="#fnpcell.pdk.pcell_params.FloatParam">FloatParam</a></li>
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li>fnpcell.pdk.pcell_params._PositiveMixin</li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.PositiveIntParam.default"><code class="name">var <span class="ident">default</span> : Optional[int]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PositiveIntParam.invalid"><code class="name">var <span class="ident">invalid</span> : Optional[Container[int]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PositiveIntParam.max"><code class="name">var <span class="ident">max</span> : Optional[int]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.PositiveIntParam.min"><code class="name">var <span class="ident">min</span> : Optional[int]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.SetParam"><code class="flex name class">
+<span>class <span class="ident">SetParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = typing.Iterable, required: bool = True, default: Optional[Iterable[Any]] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, element_type: Optional[Type[Any]] = None, immutable: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Set</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.SetParam.default"><code class="name">var <span class="ident">default</span> : Optional[Iterable[Any]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.SetParam.element_type"><code class="name">var <span class="ident">element_type</span> : Optional[Type[Any]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.SetParam.immutable"><code class="name">var <span class="ident">immutable</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.SetParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.SetParam.resolve"><code class="name flex">
+<span>def <span class="ident">resolve</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.SetParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.TextParam"><code class="flex name class">
+<span>class <span class="ident">TextParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = builtins.str, required: bool = True, default: Optional[str] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Text</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.NameParam" href="#fnpcell.pdk.pcell_params.NameParam">NameParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.TextParam.default"><code class="name">var <span class="ident">default</span> : Optional[str]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.TextParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"><p>str(object='') -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.<strong>str</strong>() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to 'strict'.</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.TextParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.TransformParam"><code class="flex name class">
+<span>class <span class="ident">TransformParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = fnpcell.transform.Affine2D, required: bool = False, default: Optional[<a title="fnpcell.transform.Affine2D" href="../transform.html#fnpcell.transform.Affine2D">Affine2D</a>] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for Transformations</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.TransformParam.default"><code class="name">var <span class="ident">default</span> : Optional[<a title="fnpcell.transform.Affine2D" href="../transform.html#fnpcell.transform.Affine2D">Affine2D</a>]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.TransformParam.required"><code class="name">var <span class="ident">required</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.TransformParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"><p>Affine2D transformation matrix.</p>
+<p>Usage:</p>
+<pre><code class="language-python">from fnpcell import all as fp
+
+t = fp.translate(10, 0)
+r = fp.rotate(degrees=30)
+transform = t @ r
+
+assert transform == fp.translate(10, 0).rotate(degrees=30)
+
+points = [(0, 0), (1, 0), (1, 1)]
+transformed_points = transform(points)  # equals to transform.transform_points(points)
+</code></pre></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.TransformParam.resolve"><code class="name flex">
+<span>def <span class="ident">resolve</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.WaveguideTypeParam"><code class="flex name class">
+<span>class <span class="ident">WaveguideTypeParam</span></span>
+<span>(</span><span>type: Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None] = fnpcell.interfaces.IWaveguideType, required: bool = True, default: Optional[Any] = None, default_factory: Union[str, Callable[[], Any]] = '_default_{name}', preprocessor: Optional[Callable[[Any], Any]] = None, frozen: bool = False, doc: Optional[str] = None, band: Union[<a title="fnpcell.interfaces.IBand" href="../interfaces.html#fnpcell.interfaces.IBand">IBand</a>, Container[<a title="fnpcell.interfaces.IBand" href="../interfaces.html#fnpcell.interfaces.IBand">IBand</a>], None] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Parameter for WaveguideType</p>
+<p>See <code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code> for details</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></li>
+<li><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.WaveguideTypeParam.band"><code class="name">var <span class="ident">band</span> : Union[<a title="fnpcell.interfaces.IBand" href="../interfaces.html#fnpcell.interfaces.IBand">IBand</a>, Container[<a title="fnpcell.interfaces.IBand" href="../interfaces.html#fnpcell.interfaces.IBand">IBand</a>], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.pcell_params.WaveguideTypeParam.type"><code class="name">var <span class="ident">type</span> : Union[type, Tuple[Union[type, Tuple[type, ...]], ...], None]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.pcell_params.WaveguideTypeParam.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, runtime: Any, name: str, value: Optional[Any], context: Optional[Any]) ‑> Any</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="../assets/tingle/0.15.3/tingle.min.css">
+<script src="../assets/tingle/0.15.3/tingle.min.js"></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = '../doc-search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="fnpcell.pdk" href="index.html">fnpcell.pdk</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.AnchorParam" href="#fnpcell.pdk.pcell_params.AnchorParam">AnchorParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.AnchorParam.default" href="#fnpcell.pdk.pcell_params.AnchorParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.AnchorParam.type" href="#fnpcell.pdk.pcell_params.AnchorParam.type">type</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.BooleanParam" href="#fnpcell.pdk.pcell_params.BooleanParam">BooleanParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.BooleanParam.default" href="#fnpcell.pdk.pcell_params.BooleanParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.BooleanParam.doc" href="#fnpcell.pdk.pcell_params.BooleanParam.doc">doc</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.BooleanParam.type" href="#fnpcell.pdk.pcell_params.BooleanParam.type">type</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.DegreeParam" href="#fnpcell.pdk.pcell_params.DegreeParam">DegreeParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.DegreeParam.default" href="#fnpcell.pdk.pcell_params.DegreeParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.DegreeParam.invalid" href="#fnpcell.pdk.pcell_params.DegreeParam.invalid">invalid</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.DegreeParam.max" href="#fnpcell.pdk.pcell_params.DegreeParam.max">max</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.DegreeParam.min" href="#fnpcell.pdk.pcell_params.DegreeParam.min">min</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.DeviceParam" href="#fnpcell.pdk.pcell_params.DeviceParam">DeviceParam</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.pdk.pcell_params.DeviceParam.default" href="#fnpcell.pdk.pcell_params.DeviceParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.DeviceParam.factory" href="#fnpcell.pdk.pcell_params.DeviceParam.factory">factory</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.DeviceParam.pin_count" href="#fnpcell.pdk.pcell_params.DeviceParam.pin_count">pin_count</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.DeviceParam.port_count" href="#fnpcell.pdk.pcell_params.DeviceParam.port_count">port_count</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.DeviceParam.type" href="#fnpcell.pdk.pcell_params.DeviceParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.DeviceParam.validate" href="#fnpcell.pdk.pcell_params.DeviceParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.FloatParam" href="#fnpcell.pdk.pcell_params.FloatParam">FloatParam</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.pdk.pcell_params.FloatParam.default" href="#fnpcell.pdk.pcell_params.FloatParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.FloatParam.invalid" href="#fnpcell.pdk.pcell_params.FloatParam.invalid">invalid</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.FloatParam.max" href="#fnpcell.pdk.pcell_params.FloatParam.max">max</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.FloatParam.min" href="#fnpcell.pdk.pcell_params.FloatParam.min">min</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.FloatParam.precision" href="#fnpcell.pdk.pcell_params.FloatParam.precision">precision</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.FloatParam.type" href="#fnpcell.pdk.pcell_params.FloatParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.FloatParam.validate" href="#fnpcell.pdk.pcell_params.FloatParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.IParam" href="#fnpcell.pdk.pcell_params.IParam">IParam</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.pdk.pcell_params.IParam.as_field" href="#fnpcell.pdk.pcell_params.IParam.as_field">as_field</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.IParam.default" href="#fnpcell.pdk.pcell_params.IParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.IParam.default_factory" href="#fnpcell.pdk.pcell_params.IParam.default_factory">default_factory</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.IParam.doc" href="#fnpcell.pdk.pcell_params.IParam.doc">doc</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.IParam.frozen" href="#fnpcell.pdk.pcell_params.IParam.frozen">frozen</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.IParam.preprocessor" href="#fnpcell.pdk.pcell_params.IParam.preprocessor">preprocessor</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.IParam.required" href="#fnpcell.pdk.pcell_params.IParam.required">required</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.IParam.resolve" href="#fnpcell.pdk.pcell_params.IParam.resolve">resolve</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.IParam.type" href="#fnpcell.pdk.pcell_params.IParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.IParam.validate" href="#fnpcell.pdk.pcell_params.IParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.IntParam" href="#fnpcell.pdk.pcell_params.IntParam">IntParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.IntParam.default" href="#fnpcell.pdk.pcell_params.IntParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.IntParam.invalid" href="#fnpcell.pdk.pcell_params.IntParam.invalid">invalid</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.IntParam.max" href="#fnpcell.pdk.pcell_params.IntParam.max">max</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.IntParam.min" href="#fnpcell.pdk.pcell_params.IntParam.min">min</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.IntParam.validate" href="#fnpcell.pdk.pcell_params.IntParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.LayerParam" href="#fnpcell.pdk.pcell_params.LayerParam">LayerParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.LayerParam.default" href="#fnpcell.pdk.pcell_params.LayerParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.LayerParam.type" href="#fnpcell.pdk.pcell_params.LayerParam.type">type</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.ListParam" href="#fnpcell.pdk.pcell_params.ListParam">ListParam</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.pdk.pcell_params.ListParam.default" href="#fnpcell.pdk.pcell_params.ListParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.ListParam.element_type" href="#fnpcell.pdk.pcell_params.ListParam.element_type">element_type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.ListParam.immutable" href="#fnpcell.pdk.pcell_params.ListParam.immutable">immutable</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.ListParam.resolve" href="#fnpcell.pdk.pcell_params.ListParam.resolve">resolve</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.ListParam.type" href="#fnpcell.pdk.pcell_params.ListParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.ListParam.validate" href="#fnpcell.pdk.pcell_params.ListParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.MappingParam" href="#fnpcell.pdk.pcell_params.MappingParam">MappingParam</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.pdk.pcell_params.MappingParam.K" href="#fnpcell.pdk.pcell_params.MappingParam.K">K</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.MappingParam.V" href="#fnpcell.pdk.pcell_params.MappingParam.V">V</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.MappingParam.default" href="#fnpcell.pdk.pcell_params.MappingParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.MappingParam.immutable" href="#fnpcell.pdk.pcell_params.MappingParam.immutable">immutable</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.MappingParam.resolve" href="#fnpcell.pdk.pcell_params.MappingParam.resolve">resolve</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.MappingParam.type" href="#fnpcell.pdk.pcell_params.MappingParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.MappingParam.validate" href="#fnpcell.pdk.pcell_params.MappingParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.MetalLineTypeParam" href="#fnpcell.pdk.pcell_params.MetalLineTypeParam">MetalLineTypeParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.MetalLineTypeParam.band" href="#fnpcell.pdk.pcell_params.MetalLineTypeParam.band">band</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.MetalLineTypeParam.type" href="#fnpcell.pdk.pcell_params.MetalLineTypeParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.MetalLineTypeParam.validate" href="#fnpcell.pdk.pcell_params.MetalLineTypeParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.NameListParam" href="#fnpcell.pdk.pcell_params.NameListParam">NameListParam</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.pdk.pcell_params.NameListParam.count" href="#fnpcell.pdk.pcell_params.NameListParam.count">count</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NameListParam.default" href="#fnpcell.pdk.pcell_params.NameListParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NameListParam.max_count" href="#fnpcell.pdk.pcell_params.NameListParam.max_count">max_count</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NameListParam.min_count" href="#fnpcell.pdk.pcell_params.NameListParam.min_count">min_count</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NameListParam.resolve" href="#fnpcell.pdk.pcell_params.NameListParam.resolve">resolve</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NameListParam.type" href="#fnpcell.pdk.pcell_params.NameListParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NameListParam.validate" href="#fnpcell.pdk.pcell_params.NameListParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.NameParam" href="#fnpcell.pdk.pcell_params.NameParam">NameParam</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.pdk.pcell_params.NameParam.default" href="#fnpcell.pdk.pcell_params.NameParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NameParam.prefix" href="#fnpcell.pdk.pcell_params.NameParam.prefix">prefix</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NameParam.required" href="#fnpcell.pdk.pcell_params.NameParam.required">required</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NameParam.resolve" href="#fnpcell.pdk.pcell_params.NameParam.resolve">resolve</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NameParam.type" href="#fnpcell.pdk.pcell_params.NameParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NameParam.validate" href="#fnpcell.pdk.pcell_params.NameParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.NonNegFloatParam" href="#fnpcell.pdk.pcell_params.NonNegFloatParam">NonNegFloatParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.NonNegFloatParam.default" href="#fnpcell.pdk.pcell_params.NonNegFloatParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NonNegFloatParam.invalid" href="#fnpcell.pdk.pcell_params.NonNegFloatParam.invalid">invalid</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NonNegFloatParam.max" href="#fnpcell.pdk.pcell_params.NonNegFloatParam.max">max</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NonNegFloatParam.min" href="#fnpcell.pdk.pcell_params.NonNegFloatParam.min">min</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.NonNegIntParam" href="#fnpcell.pdk.pcell_params.NonNegIntParam">NonNegIntParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.NonNegIntParam.default" href="#fnpcell.pdk.pcell_params.NonNegIntParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NonNegIntParam.invalid" href="#fnpcell.pdk.pcell_params.NonNegIntParam.invalid">invalid</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NonNegIntParam.max" href="#fnpcell.pdk.pcell_params.NonNegIntParam.max">max</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.NonNegIntParam.min" href="#fnpcell.pdk.pcell_params.NonNegIntParam.min">min</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.Param" href="#fnpcell.pdk.pcell_params.Param">Param</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.pdk.pcell_params.Param.default" href="#fnpcell.pdk.pcell_params.Param.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.Param.default_factory" href="#fnpcell.pdk.pcell_params.Param.default_factory">default_factory</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.Param.doc" href="#fnpcell.pdk.pcell_params.Param.doc">doc</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.Param.frozen" href="#fnpcell.pdk.pcell_params.Param.frozen">frozen</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.Param.preprocessor" href="#fnpcell.pdk.pcell_params.Param.preprocessor">preprocessor</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.Param.required" href="#fnpcell.pdk.pcell_params.Param.required">required</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.Param.type" href="#fnpcell.pdk.pcell_params.Param.type">type</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.PointsParam" href="#fnpcell.pdk.pcell_params.PointsParam">PointsParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.PointsParam.default" href="#fnpcell.pdk.pcell_params.PointsParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PointsParam.min_count" href="#fnpcell.pdk.pcell_params.PointsParam.min_count">min_count</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PointsParam.resolve" href="#fnpcell.pdk.pcell_params.PointsParam.resolve">resolve</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PointsParam.type" href="#fnpcell.pdk.pcell_params.PointsParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PointsParam.validate" href="#fnpcell.pdk.pcell_params.PointsParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.PortOptionsParam" href="#fnpcell.pdk.pcell_params.PortOptionsParam">PortOptionsParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.PortOptionsParam.count" href="#fnpcell.pdk.pcell_params.PortOptionsParam.count">count</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PortOptionsParam.default" href="#fnpcell.pdk.pcell_params.PortOptionsParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PortOptionsParam.resolve" href="#fnpcell.pdk.pcell_params.PortOptionsParam.resolve">resolve</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PortOptionsParam.type" href="#fnpcell.pdk.pcell_params.PortOptionsParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PortOptionsParam.validate" href="#fnpcell.pdk.pcell_params.PortOptionsParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.PositionParam" href="#fnpcell.pdk.pcell_params.PositionParam">PositionParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.PositionParam.default" href="#fnpcell.pdk.pcell_params.PositionParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PositionParam.type" href="#fnpcell.pdk.pcell_params.PositionParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PositionParam.validate" href="#fnpcell.pdk.pcell_params.PositionParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.PositiveFloatParam" href="#fnpcell.pdk.pcell_params.PositiveFloatParam">PositiveFloatParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.PositiveFloatParam.default" href="#fnpcell.pdk.pcell_params.PositiveFloatParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PositiveFloatParam.invalid" href="#fnpcell.pdk.pcell_params.PositiveFloatParam.invalid">invalid</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PositiveFloatParam.max" href="#fnpcell.pdk.pcell_params.PositiveFloatParam.max">max</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PositiveFloatParam.min" href="#fnpcell.pdk.pcell_params.PositiveFloatParam.min">min</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.PositiveIntParam" href="#fnpcell.pdk.pcell_params.PositiveIntParam">PositiveIntParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.PositiveIntParam.default" href="#fnpcell.pdk.pcell_params.PositiveIntParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PositiveIntParam.invalid" href="#fnpcell.pdk.pcell_params.PositiveIntParam.invalid">invalid</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PositiveIntParam.max" href="#fnpcell.pdk.pcell_params.PositiveIntParam.max">max</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.PositiveIntParam.min" href="#fnpcell.pdk.pcell_params.PositiveIntParam.min">min</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.SetParam" href="#fnpcell.pdk.pcell_params.SetParam">SetParam</a></code></h4>
+<ul class="two-column">
+<li><code><a title="fnpcell.pdk.pcell_params.SetParam.default" href="#fnpcell.pdk.pcell_params.SetParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.SetParam.element_type" href="#fnpcell.pdk.pcell_params.SetParam.element_type">element_type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.SetParam.immutable" href="#fnpcell.pdk.pcell_params.SetParam.immutable">immutable</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.SetParam.resolve" href="#fnpcell.pdk.pcell_params.SetParam.resolve">resolve</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.SetParam.type" href="#fnpcell.pdk.pcell_params.SetParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.SetParam.validate" href="#fnpcell.pdk.pcell_params.SetParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.TextParam" href="#fnpcell.pdk.pcell_params.TextParam">TextParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.TextParam.default" href="#fnpcell.pdk.pcell_params.TextParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.TextParam.type" href="#fnpcell.pdk.pcell_params.TextParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.TextParam.validate" href="#fnpcell.pdk.pcell_params.TextParam.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.TransformParam" href="#fnpcell.pdk.pcell_params.TransformParam">TransformParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.TransformParam.default" href="#fnpcell.pdk.pcell_params.TransformParam.default">default</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.TransformParam.required" href="#fnpcell.pdk.pcell_params.TransformParam.required">required</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.TransformParam.resolve" href="#fnpcell.pdk.pcell_params.TransformParam.resolve">resolve</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.TransformParam.type" href="#fnpcell.pdk.pcell_params.TransformParam.type">type</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.pcell_params.WaveguideTypeParam" href="#fnpcell.pdk.pcell_params.WaveguideTypeParam">WaveguideTypeParam</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.pcell_params.WaveguideTypeParam.band" href="#fnpcell.pdk.pcell_params.WaveguideTypeParam.band">band</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.WaveguideTypeParam.type" href="#fnpcell.pdk.pcell_params.WaveguideTypeParam.type">type</a></code></li>
+<li><code><a title="fnpcell.pdk.pcell_params.WaveguideTypeParam.validate" href="#fnpcell.pdk.pcell_params.WaveguideTypeParam.validate">validate</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>

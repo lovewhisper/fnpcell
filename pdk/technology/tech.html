@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>fnpcell.pdk.technology.tech API documentation</title>
+<meta name="description" content="Typingfix for get_technology, mainly internal" />
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/sanitize.min.css">
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/typography.min.css">
+<link rel="stylesheet preload" as="style" href="../../assets/highlight.js/10.1.1/styles/github-dark.min.css">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="../../assets/highlight.js/10.1.1/highlight.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>fnpcell.pdk.technology.tech</code></h1>
+</header>
+<section id="section-intro">
+<p>Typingfix for get_technology, mainly internal</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.IAutoTransition"><code class="flex name class">
+<span>class <span class="ident">IAutoTransition</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.IAutoTransition.DEFAULT"><code class="name">var <span class="ident">DEFAULT</span> : <a title="fnpcell.pdk.technology.auto_transition.AutoTransition" href="auto_transition.html#fnpcell.pdk.technology.auto_transition.AutoTransition">AutoTransition</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IAutoVias"><code class="flex name class">
+<span>class <span class="ident">IAutoVias</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.IAutoVias.DEFAULT"><code class="name">var <span class="ident">DEFAULT</span> : <a title="fnpcell.pdk.technology.auto_vias.AutoVias" href="auto_vias.html#fnpcell.pdk.technology.auto_vias.AutoVias">AutoVias</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IDevice"><code class="flex name class">
+<span>class <span class="ident">IDevice</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.IDevice.BAND_LAYER"><code class="name">var <span class="ident">BAND_LAYER</span> : <a title="fnpcell.interfaces.ILayer" href="../../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.IDevice.band_annotation"><code class="name flex">
+<span>def <span class="ident">band_annotation</span></span>(<span>self, device: <a title="fnpcell.interfaces.ICell" href="../../interfaces.html#fnpcell.interfaces.ICell">ICell</a>, bands: Iterable[<a title="fnpcell.interfaces.IBand" href="../../interfaces.html#fnpcell.interfaces.IBand">IBand</a>]) ‑> Union[None, <a title="fnpcell.interfaces.IElement" href="../../interfaces.html#fnpcell.interfaces.IElement">IElement</a>, Collection[<a title="fnpcell.interfaces.IElement" href="../../interfaces.html#fnpcell.interfaces.IElement">IElement</a>]]</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IDisplay"><code class="flex name class">
+<span>class <span class="ident">IDisplay</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.IDisplay.LAYER_STYLE"><code class="name">var <span class="ident">LAYER_STYLE</span> : <a title="fnpcell.pdk.technology.display.LayerStyleSet" href="display.html#fnpcell.pdk.technology.display.LayerStyleSet">LayerStyleSet</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IGdsii"><code class="flex name class">
+<span>class <span class="ident">IGdsii</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.IGdsii.MAX_COORDINATES"><code class="name">var <span class="ident">MAX_COORDINATES</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ILabel"><code class="flex name class">
+<span>class <span class="ident">ILabel</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.ILabel.BASELINE"><code class="name">var <span class="ident">BASELINE</span> : <a title="fnpcell.interfaces.TextBaseline" href="../../interfaces.html#fnpcell.interfaces.TextBaseline">TextBaseline</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ILabel.FONT"><code class="name">var <span class="ident">FONT</span> : <a title="fnpcell.interfaces.IFont" href="../../interfaces.html#fnpcell.interfaces.IFont">IFont</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ILabel.FONT_SIZE"><code class="name">var <span class="ident">FONT_SIZE</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ILinkingPolicy"><code class="flex name class">
+<span>class <span class="ident">ILinkingPolicy</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.ILinkingPolicy.DEFAULT"><code class="name">var <span class="ident">DEFAULT</span> : <a title="fnpcell.pdk.technology.auto_link.LinkingPolicy" href="auto_link.html#fnpcell.pdk.technology.auto_link.LinkingPolicy">LinkingPolicy</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IMetal"><code class="flex name class">
+<span>class <span class="ident">IMetal</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.IMetal.DEFAULT_LINE_WIDTH"><code class="name">var <span class="ident">DEFAULT_LINE_WIDTH</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Static methods</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.IMetal.from_single_layer"><code class="name flex">
+<span>def <span class="ident">from_single_layer</span></span>(<span>layer: <a title="fnpcell.interfaces.ILayer" href="../../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a>) ‑> <a title="fnpcell.interfaces.IMetalLineType" href="../../interfaces.html#fnpcell.interfaces.IMetalLineType">IMetalLineType</a></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IMetrics"><code class="flex name class">
+<span>class <span class="ident">IMetrics</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.IMetrics.ANGLE_STEP"><code class="name">var <span class="ident">ANGLE_STEP</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IMetrics.GRID"><code class="name">var <span class="ident">GRID</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IMetrics.UNIT"><code class="name">var <span class="ident">UNIT</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IPin"><code class="flex name class">
+<span>class <span class="ident">IPin</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.IPin.ICON_LAYER"><code class="name">var <span class="ident">ICON_LAYER</span> : Callable[[<a title="fnpcell.interfaces.IMetalLineType" href="../../interfaces.html#fnpcell.interfaces.IMetalLineType">IMetalLineType</a>], <a title="fnpcell.interfaces.ILayer" href="../../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a>]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IPin.LENGTH"><code class="name">var <span class="ident">LENGTH</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IPin.OFFSET"><code class="name">var <span class="ident">OFFSET</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IPin.TEXT_LAYER"><code class="name">var <span class="ident">TEXT_LAYER</span> : Callable[[<a title="fnpcell.interfaces.IMetalLineType" href="../../interfaces.html#fnpcell.interfaces.IMetalLineType">IMetalLineType</a>], <a title="fnpcell.interfaces.ILayer" href="../../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a>]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IPort"><code class="flex name class">
+<span>class <span class="ident">IPort</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.IPort.ICON_LAYER"><code class="name">var <span class="ident">ICON_LAYER</span> : Callable[[<a title="fnpcell.interfaces.IWaveguideType" href="../../interfaces.html#fnpcell.interfaces.IWaveguideType">IWaveguideType</a>], <a title="fnpcell.interfaces.ILayer" href="../../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a>]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IPort.LENGTH"><code class="name">var <span class="ident">LENGTH</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IPort.OFFSET"><code class="name">var <span class="ident">OFFSET</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IPort.TEXT_LAYER"><code class="name">var <span class="ident">TEXT_LAYER</span> : Callable[[<a title="fnpcell.interfaces.IWaveguideType" href="../../interfaces.html#fnpcell.interfaces.IWaveguideType">IWaveguideType</a>], <a title="fnpcell.interfaces.ILayer" href="../../interfaces.html#fnpcell.interfaces.ILayer">ILayer</a>]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech"><code class="flex name class">
+<span>class <span class="ident">ITech</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.ITech.AUTO_METAL_LINE_TYPE"><code class="name">var <span class="ident">AUTO_METAL_LINE_TYPE</span> : <a title="fnpcell.pdk.technology.auto_metal_line_type.AutoMetalLineType" href="auto_metal_line_type.html#fnpcell.pdk.technology.auto_metal_line_type.AutoMetalLineType">AutoMetalLineType</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.AUTO_TRANSITION"><code class="name">var <span class="ident">AUTO_TRANSITION</span> : <a title="fnpcell.pdk.technology.tech.IAutoTransition" href="#fnpcell.pdk.technology.tech.IAutoTransition">IAutoTransition</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.AUTO_VIAS"><code class="name">var <span class="ident">AUTO_VIAS</span> : <a title="fnpcell.pdk.technology.tech.IAutoVias" href="#fnpcell.pdk.technology.tech.IAutoVias">IAutoVias</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.BAND"><code class="name">var <span class="ident">BAND</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.DEVICE"><code class="name">var <span class="ident">DEVICE</span> : <a title="fnpcell.pdk.technology.tech.IDevice" href="#fnpcell.pdk.technology.tech.IDevice">IDevice</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.DISPLAY"><code class="name">var <span class="ident">DISPLAY</span> : <a title="fnpcell.pdk.technology.tech.IDisplay" href="#fnpcell.pdk.technology.tech.IDisplay">IDisplay</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.FITTING_FUNCTION"><code class="name">var <span class="ident">FITTING_FUNCTION</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.GDSII"><code class="name">var <span class="ident">GDSII</span> : <a title="fnpcell.pdk.technology.tech.IGdsii" href="#fnpcell.pdk.technology.tech.IGdsii">IGdsii</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.LABEL"><code class="name">var <span class="ident">LABEL</span> : <a title="fnpcell.pdk.technology.tech.ILabel" href="#fnpcell.pdk.technology.tech.ILabel">ILabel</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.LAYER"><code class="name">var <span class="ident">LAYER</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.LINKING_POLICY"><code class="name">var <span class="ident">LINKING_POLICY</span> : <a title="fnpcell.pdk.technology.tech.ILinkingPolicy" href="#fnpcell.pdk.technology.tech.ILinkingPolicy">ILinkingPolicy</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.METAL"><code class="name">var <span class="ident">METAL</span> : <a title="fnpcell.pdk.technology.tech.IMetal" href="#fnpcell.pdk.technology.tech.IMetal">IMetal</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.METRICS"><code class="name">var <span class="ident">METRICS</span> : <a title="fnpcell.pdk.technology.tech.IMetrics" href="#fnpcell.pdk.technology.tech.IMetrics">IMetrics</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.PIN"><code class="name">var <span class="ident">PIN</span> : <a title="fnpcell.pdk.technology.tech.IPin" href="#fnpcell.pdk.technology.tech.IPin">IPin</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.PORT"><code class="name">var <span class="ident">PORT</span> : <a title="fnpcell.pdk.technology.tech.IPort" href="#fnpcell.pdk.technology.tech.IPort">IPort</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.PROCESS"><code class="name">var <span class="ident">PROCESS</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.PURPOSE"><code class="name">var <span class="ident">PURPOSE</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.VIAS"><code class="name">var <span class="ident">VIAS</span> : <a title="fnpcell.pdk.technology.tech.IVias" href="#fnpcell.pdk.technology.tech.IVias">IVias</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.ITech.WG"><code class="name">var <span class="ident">WG</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IVias"><code class="flex name class">
+<span>class <span class="ident">IVias</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="fnpcell.pdk.technology.tech.IVias.BOTTOM_SHAPE"><code class="name">var <span class="ident">BOTTOM_SHAPE</span> : <a title="fnpcell.interfaces.IShape" href="../../interfaces.html#fnpcell.interfaces.IShape">IShape</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IVias.SPACING"><code class="name">var <span class="ident">SPACING</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IVias.TOP_SHAPE"><code class="name">var <span class="ident">TOP_SHAPE</span> : <a title="fnpcell.interfaces.IShape" href="../../interfaces.html#fnpcell.interfaces.IShape">IShape</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="fnpcell.pdk.technology.tech.IVias.VIA_SHAPE"><code class="name">var <span class="ident">VIA_SHAPE</span> : <a title="fnpcell.interfaces.IShape" href="../../interfaces.html#fnpcell.interfaces.IShape">IShape</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="../../assets/tingle/0.15.3/tingle.min.css">
+<script src="../../assets/tingle/0.15.3/tingle.min.js"></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = '../../doc-search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="fnpcell.pdk.technology" href="index.html">fnpcell.pdk.technology</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.tech.IAutoTransition" href="#fnpcell.pdk.technology.tech.IAutoTransition">IAutoTransition</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.tech.IAutoTransition.DEFAULT" href="#fnpcell.pdk.technology.tech.IAutoTransition.DEFAULT">DEFAULT</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.tech.IAutoVias" href="#fnpcell.pdk.technology.tech.IAutoVias">IAutoVias</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.tech.IAutoVias.DEFAULT" href="#fnpcell.pdk.technology.tech.IAutoVias.DEFAULT">DEFAULT</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.tech.IDevice" href="#fnpcell.pdk.technology.tech.IDevice">IDevice</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.tech.IDevice.BAND_LAYER" href="#fnpcell.pdk.technology.tech.IDevice.BAND_LAYER">BAND_LAYER</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.IDevice.band_annotation" href="#fnpcell.pdk.technology.tech.IDevice.band_annotation">band_annotation</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.tech.IDisplay" href="#fnpcell.pdk.technology.tech.IDisplay">IDisplay</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.tech.IDisplay.LAYER_STYLE" href="#fnpcell.pdk.technology.tech.IDisplay.LAYER_STYLE">LAYER_STYLE</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.tech.IGdsii" href="#fnpcell.pdk.technology.tech.IGdsii">IGdsii</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.tech.IGdsii.MAX_COORDINATES" href="#fnpcell.pdk.technology.tech.IGdsii.MAX_COORDINATES">MAX_COORDINATES</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.tech.ILabel" href="#fnpcell.pdk.technology.tech.ILabel">ILabel</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.tech.ILabel.BASELINE" href="#fnpcell.pdk.technology.tech.ILabel.BASELINE">BASELINE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ILabel.FONT" href="#fnpcell.pdk.technology.tech.ILabel.FONT">FONT</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ILabel.FONT_SIZE" href="#fnpcell.pdk.technology.tech.ILabel.FONT_SIZE">FONT_SIZE</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.tech.ILinkingPolicy" href="#fnpcell.pdk.technology.tech.ILinkingPolicy">ILinkingPolicy</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.tech.ILinkingPolicy.DEFAULT" href="#fnpcell.pdk.technology.tech.ILinkingPolicy.DEFAULT">DEFAULT</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.tech.IMetal" href="#fnpcell.pdk.technology.tech.IMetal">IMetal</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.tech.IMetal.DEFAULT_LINE_WIDTH" href="#fnpcell.pdk.technology.tech.IMetal.DEFAULT_LINE_WIDTH">DEFAULT_LINE_WIDTH</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.IMetal.from_single_layer" href="#fnpcell.pdk.technology.tech.IMetal.from_single_layer">from_single_layer</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.tech.IMetrics" href="#fnpcell.pdk.technology.tech.IMetrics">IMetrics</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.tech.IMetrics.ANGLE_STEP" href="#fnpcell.pdk.technology.tech.IMetrics.ANGLE_STEP">ANGLE_STEP</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.IMetrics.GRID" href="#fnpcell.pdk.technology.tech.IMetrics.GRID">GRID</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.IMetrics.UNIT" href="#fnpcell.pdk.technology.tech.IMetrics.UNIT">UNIT</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.tech.IPin" href="#fnpcell.pdk.technology.tech.IPin">IPin</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.tech.IPin.ICON_LAYER" href="#fnpcell.pdk.technology.tech.IPin.ICON_LAYER">ICON_LAYER</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.IPin.LENGTH" href="#fnpcell.pdk.technology.tech.IPin.LENGTH">LENGTH</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.IPin.OFFSET" href="#fnpcell.pdk.technology.tech.IPin.OFFSET">OFFSET</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.IPin.TEXT_LAYER" href="#fnpcell.pdk.technology.tech.IPin.TEXT_LAYER">TEXT_LAYER</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.tech.IPort" href="#fnpcell.pdk.technology.tech.IPort">IPort</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.tech.IPort.ICON_LAYER" href="#fnpcell.pdk.technology.tech.IPort.ICON_LAYER">ICON_LAYER</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.IPort.LENGTH" href="#fnpcell.pdk.technology.tech.IPort.LENGTH">LENGTH</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.IPort.OFFSET" href="#fnpcell.pdk.technology.tech.IPort.OFFSET">OFFSET</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.IPort.TEXT_LAYER" href="#fnpcell.pdk.technology.tech.IPort.TEXT_LAYER">TEXT_LAYER</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.tech.ITech" href="#fnpcell.pdk.technology.tech.ITech">ITech</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.AUTO_METAL_LINE_TYPE" href="#fnpcell.pdk.technology.tech.ITech.AUTO_METAL_LINE_TYPE">AUTO_METAL_LINE_TYPE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.AUTO_TRANSITION" href="#fnpcell.pdk.technology.tech.ITech.AUTO_TRANSITION">AUTO_TRANSITION</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.AUTO_VIAS" href="#fnpcell.pdk.technology.tech.ITech.AUTO_VIAS">AUTO_VIAS</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.BAND" href="#fnpcell.pdk.technology.tech.ITech.BAND">BAND</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.DEVICE" href="#fnpcell.pdk.technology.tech.ITech.DEVICE">DEVICE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.DISPLAY" href="#fnpcell.pdk.technology.tech.ITech.DISPLAY">DISPLAY</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.FITTING_FUNCTION" href="#fnpcell.pdk.technology.tech.ITech.FITTING_FUNCTION">FITTING_FUNCTION</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.GDSII" href="#fnpcell.pdk.technology.tech.ITech.GDSII">GDSII</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.LABEL" href="#fnpcell.pdk.technology.tech.ITech.LABEL">LABEL</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.LAYER" href="#fnpcell.pdk.technology.tech.ITech.LAYER">LAYER</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.LINKING_POLICY" href="#fnpcell.pdk.technology.tech.ITech.LINKING_POLICY">LINKING_POLICY</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.METAL" href="#fnpcell.pdk.technology.tech.ITech.METAL">METAL</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.METRICS" href="#fnpcell.pdk.technology.tech.ITech.METRICS">METRICS</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.PIN" href="#fnpcell.pdk.technology.tech.ITech.PIN">PIN</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.PORT" href="#fnpcell.pdk.technology.tech.ITech.PORT">PORT</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.PROCESS" href="#fnpcell.pdk.technology.tech.ITech.PROCESS">PROCESS</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.PURPOSE" href="#fnpcell.pdk.technology.tech.ITech.PURPOSE">PURPOSE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.VIAS" href="#fnpcell.pdk.technology.tech.ITech.VIAS">VIAS</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.ITech.WG" href="#fnpcell.pdk.technology.tech.ITech.WG">WG</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="fnpcell.pdk.technology.tech.IVias" href="#fnpcell.pdk.technology.tech.IVias">IVias</a></code></h4>
+<ul class="">
+<li><code><a title="fnpcell.pdk.technology.tech.IVias.BOTTOM_SHAPE" href="#fnpcell.pdk.technology.tech.IVias.BOTTOM_SHAPE">BOTTOM_SHAPE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.IVias.SPACING" href="#fnpcell.pdk.technology.tech.IVias.SPACING">SPACING</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.IVias.TOP_SHAPE" href="#fnpcell.pdk.technology.tech.IVias.TOP_SHAPE">TOP_SHAPE</a></code></li>
+<li><code><a title="fnpcell.pdk.technology.tech.IVias.VIA_SHAPE" href="#fnpcell.pdk.technology.tech.IVias.VIA_SHAPE">VIA_SHAPE</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>
